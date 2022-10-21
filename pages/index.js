@@ -1,3 +1,9 @@
+import Layout from '../components/Layout.jsx';
+
 export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello World!</h1>;
+  return (
+    <Layout title="Home">
+      <h1 className="text-3xl">Borderline Pizza</h1>
+    </Layout>
+  );
 }
