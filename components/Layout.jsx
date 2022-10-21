@@ -7,7 +7,7 @@ export default function Layout({ title, children }) {
     <>
       <Head>
         <title>
-          {title ? title + -'Borderline Pizza' : 'Borderline Pizza'}
+          {title ? title + '- Borderline Pizza' : 'Borderline Pizza'}
         </title>
         <meta name="description" content="Pizza Restaurant Website" />
         <link rel="icon" href="/favicon.ico" />
@@ -19,6 +19,11 @@ export default function Layout({ title, children }) {
             <Link href="/">
               <a className="text-lg font-bold">Borderline Pizza</a>
             </Link>
+            <div>
+              <Link href="/menu">
+                <a className="p-2">Menu</a>
+              </Link>
+            </div>
           </nav>
         </header>
         <main className="container m-auto mt-4 px-4">{children}</main>

@@ -9,7 +9,7 @@ export default function Location() {
         height="450"
         loading="lazy"
         allowfullscreen
-        src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJS0Nrbcxk8YcR-KLPPbj-akY&key=..."
+        src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJS0Nrbcxk8YcR-KLPPbj-akY&key=${googleMapsKey}`}
       ></iframe>
     </div>
   );
