@@ -14,8 +14,8 @@ export default function Layout({ title, children }) {
       </Head>
 
       <div className="flex min-h-screen flex-col justify-between">
-        <header className="sticky  top-0 z-30 w-full shadow">
-          <nav className="flex h-12 items-center px-4 justify-between ">
+        <header className="sticky top-0 z-10 bg-white w-full shadow">
+          <nav className="flex z-1 h-12 items-center px-4 justify-between ">
             <Link href="/">
               <a className="text-lg font-bold">Borderline Pizza</a>
             </Link>
