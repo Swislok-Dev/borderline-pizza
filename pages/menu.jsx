@@ -10,12 +10,10 @@ function MenuScreen() {
     <Layout title="Menu">
       {/* <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 "> */}
       <div className="grid grid-cols-1 ">
-        {['Appetizers', 'Nachos'].map((step) => (
-          <>
-            <div className="font-bold" key={step}>
-              {step}
-            </div>
-            <div className="grid grid-cols-1 m-4">
+        {['Appetizers', 'Nachos', 'Salads'].map((step) => (
+          <section key={step}>
+            <h2 className="font-bold">{step}</h2>
+            <article className="grid grid-cols-1 m-4">
               {products.map((product) =>
                 product.category === step.toLowerCase() ? (
                   <ProductItem
@@ -24,8 +22,8 @@ function MenuScreen() {
                   ></ProductItem>
                 ) : null
               )}
-            </div>
-          </>
+            </article>
+          </section>
         ))}
         {/* {products.map((category, index) => (
           <div key={`${category}-${index}`}>
