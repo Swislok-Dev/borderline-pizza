@@ -15,7 +15,7 @@ export default function ProductScreen() {
 
   return (
     <Layout title={product.title}>
-      <div className="py-2">
+      <div className="text-left text-blue-500 py-2">
         <Link href="/menu">back to menu</Link>
       </div>
 
