@@ -5,7 +5,7 @@
 
 const data = {
   products: [
-    // appetizers
+    // // appetizers
 
     {
       title: 'Bread Sticks',
@@ -50,7 +50,7 @@ const data = {
       slug: 'cheese-bread-or-garlic-cheese-bread',
     },
 
-    // // nachos
+    // nachos
 
     {
       title: 'Nachos or Chips and Salsa',
@@ -93,7 +93,7 @@ const data = {
       slug: 'super-duper-nachos',
     },
 
-    // // salads
+    // salads
 
     {
       title: 'Garden Salad',
@@ -123,141 +123,56 @@ const data = {
       slug: 'taco-salad',
     },
 
-    // {
-    //   nachos: [
-    //     {
-    //       title: 'Nachos or Chips and Salsa',
-    //       description: '',
-    //       category: 'Nachos',
-    //       prices: {
-    //         small: 2.5,
-    //         large: 3.75,
-    //       },
-    //       options: {},
-    //     },
-    //     {
-    //       title: 'Meaty Nachos',
-    //       description: '',
-    //       category: 'Nachos',
-    //       prices: {
-    //         small: 3.5,
-    //         large: 6.25,
-    //       },
-    //       options: {},
-    //     },
-    //     {
-    //       title: 'Super Nachos',
-    //       description: '',
-    //       category: 'Nachos',
-    //       prices: {
-    //         small: 5.0,
-    //         large: 8.0,
-    //       },
-    //       options: {},
-    //     },
-    //     {
-    //       title: 'Super Duper Nachos',
-    //       description: '',
-    //       category: 'Nachos',
-    //       prices: {
-    //         small: 6.0,
-    //         large: 9.0,
-    //       },
-    //       options: {},
-    //     },
-    //   ],
-    // },
-    // {
-    //   salads: [
-    //     {
-    //       title: 'Garden Salad',
-    //       description: '',
-    //       category: 'Salads',
-    //       prices: 2.75,
-    //       options: {
-    //         addChicken: 1.25, //should equal $4.00
-    //       },
-    //     },
-    //     {
-    //       title: 'Taco Salad',
-    //       description: '',
-    //       category: 'Salads',
-    //       prices: {
-    //         small: 5.0,
-    //         large: 8.0,
-    //       },
-    //       options: {
-    //         chicken: 0.5,
-    //       },
-    //     },
-    //   ],
-    // },
-    // {
-    //   tacos: [
-    //     {
-    //       title: 'Hard Taco',
-    //       description: '',
-    //       category: 'Tacos',
-    //       prices: 1.5,
-    //       options: 'Beef, Chicken BBQ',
-    //     },
-    //     {
-    //       title: 'Baby Soft Taco',
-    //       description: '',
-    //       category: 'Tacos',
-    //       prices: 1.5,
-    //       options: 'Beef, Chicken or BBQ',
-    //     },
-    //     {
-    //       title: 'Soft Taco',
-    //       description: '',
-    //       prices: {
-    //         beef: 4.5,
-    //         chicken: 5.0,
-    //       },
-    //       options: {},
-    //     },
-    //     {
-    //       title: 'Super Taco:',
-    //       description: '',
-    //       prices: {
-    //         beef: 4.5,
-    //         chicken: 5,
-    //       },
-    //       options: {},
-    //     },
-    //     {
-    //       title: 'Soft Taco Dinner',
-    //       description: '',
-    //       prices: {
-    //         beef: 6.0,
-    //         chicken: 6.5,
-    //       },
-    //       options: {},
-    //     },
-    //   ],
-    // },
-    // {
-    //   extras: [
-    //     {
-    //       title: 'Tomatoes, black olives, jalapenos',
-    //       description: 'added directly to your food',
-    //       prices: 0.25,
-    //     },
-    //     {
-    //       title: 'Small cup of',
-    //       description:
-    //         'tomatoes, black olives, onions, jalapenos, sour cream, hot salsa, mild salsa, nacho cheese or taco sauce',
-    //       prices: 0.5,
-    //     },
-    //     {
-    //       title: 'Large cup of',
-    //       description:
-    //         'tomatoes, black olives, onions, jalapenos, sour cream, hot salsa, mild salsa, nacho cheese or taco sauce',
-    //       prices: 1.0,
-    //     },
-    //   ],
-    // },
+    // tacos
+
+    {
+      title: 'Hard Taco',
+      category: 'tacos',
+      prices: {
+        'Beef, Chicken or BBQ': 1.5,
+      },
+      options: {},
+      slug: 'hard-taco',
+    },
+    {
+      title: 'Baby Soft Taco',
+      category: 'tacos',
+      prices: {
+        'Beef, Chicken or BBQ': 1.5,
+      },
+      options: {},
+      slug: 'baby-soft-taco',
+    },
+    {
+      title: 'Soft Taco',
+      category: 'tacos',
+      prices: {
+        beef: 3.5,
+        'Chicken, Chicken Ranch or BBQ': 4.0,
+      },
+      options: {},
+      slug: 'soft-taco',
+    },
+    {
+      title: 'Super Taco',
+      category: 'tacos',
+      prices: {
+        beef: 4.5,
+        'Chicken, Chicken Ranch or BBQ': 5.0,
+      },
+      options: {},
+      slug: 'super-taco',
+    },
+    {
+      title: 'Soft Taco Dinner',
+      category: 'tacos',
+      prices: {
+        beef: 6,
+        'Chicken, Chicken Ranch or BBQ': 6.5,
+      },
+      options: {},
+      slug: 'soft-taco-dinner',
+    },
   ],
 };
 

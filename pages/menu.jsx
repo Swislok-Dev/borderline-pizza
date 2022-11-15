@@ -8,11 +8,11 @@ function MenuScreen() {
 
   return (
     <Layout title="Menu">
-      <div className="grid grid-cols-1 ">
-        {['Appetizers', 'Nachos', 'Salads'].map((step) => (
-          <section key={step}>
-            <h2 className="font-bold mt-5 text-2xl">{step}</h2>
-            <article className=" m-4">
+      <div key="menu">
+        {['Appetizers', 'Nachos', 'Salads', 'Tacos'].map((step, index) => (
+          <section key={step} className="">
+            <h2 className="font-bold m-5 text-2xl ">{step}</h2>
+            <article key={step[index]} className="max-w-3/5 ">
               {products.map((product) =>
                 product.category === step.toLowerCase() ? (
                   <ProductItem
