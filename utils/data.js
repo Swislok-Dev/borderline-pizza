@@ -13,6 +13,7 @@ const data = {
       prices: {
         standard: 4.5,
       },
+      options: {},
       slug: 'bread-sticks',
     },
     {
@@ -21,6 +22,7 @@ const data = {
       prices: {
         standard: 6.5,
       },
+      options: {},
       slug: 'cheese-sticks',
     },
     {
@@ -28,7 +30,9 @@ const data = {
       category: 'appetizers',
       prices: {
         standard: 9.0,
-        extraSauce: 1,
+      },
+      options: {
+        'Extra Sauce': 1,
       },
       slug: 'bacon-cheddar-cheese-sticks',
     },
@@ -39,42 +43,14 @@ const data = {
         small: 6.5,
         medium: 9.0,
         large: 12.0,
-        extraSauce: 1.0,
+      },
+      options: {
+        'Extra Sauce': 1.0,
       },
       slug: 'cheese-bread-or-garlic-cheese-bread',
     },
 
-    // beverages
-
-    // {
-    //   beverages: [
-    //     {
-    //       title: 'Dine In',
-    //       prices: {
-    //         adult: 1.75,
-    //         child: 0.5,
-    //       },
-    //     },
-
-    //     {
-    //       title: 'Carry Out',
-    //       description: 'No Refills on carry out or a shared glass',
-    //       prices: {
-    //         large: 1.75,
-    //       },
-    //     },
-    //     {
-    //       title: '12 Oz Can',
-    //       prices: 1.0,
-    //     },
-    //     {
-    //       title: '2 Liter Bottle',
-    //       prices: 3.0,
-    //     },
-    //   ],
-    // },
-
-    // nachos
+    // // nachos
 
     {
       title: 'Nachos or Chips and Salsa',
@@ -83,6 +59,7 @@ const data = {
         small: 2.5,
         large: 3.75,
       },
+      options: {},
       slug: 'nachos-or-chips-and-salsa',
     },
     {
@@ -92,6 +69,7 @@ const data = {
         small: 3.5,
         large: 6.25,
       },
+      options: {},
       slug: 'meaty-nachos',
     },
     {
@@ -101,6 +79,7 @@ const data = {
         small: 5.0,
         large: 8.0,
       },
+      options: {},
       slug: 'super-nachos',
     },
     {
@@ -110,16 +89,19 @@ const data = {
         small: 6.0,
         large: 9.0,
       },
+      options: {},
       slug: 'super-duper-nachos',
     },
 
-    // salads
+    // // salads
 
     {
       title: 'Garden Salad',
       category: 'salads',
       prices: {
         'Ranch or French Dressing': 2.75,
+      },
+      options: {
         'Add Chicken': 4.0,
       },
       slug: 'garden-salad',
@@ -137,6 +119,7 @@ const data = {
           large: 8.5,
         },
       },
+      options: {},
       slug: 'taco-salad',
     },
 
