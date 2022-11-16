@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function Location() {
   const googleMapsKey = process.env.GOOGLE_MAPS_API_KEY;

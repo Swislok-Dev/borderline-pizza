@@ -1,8 +1,8 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import Layout from '../../components/Layout';
-import Link from 'next/link';
-import data from '../../utils/data';
+import React from "react";
+import { useRouter } from "next/router";
+import Layout from "../../components/Layout";
+import Link from "next/link";
+import data from "../../utils/data";
 
 export default function ProductScreen() {
   const { query } = useRouter();
@@ -15,7 +15,7 @@ export default function ProductScreen() {
 
   return (
     <Layout title={product.title}>
-      <div className="text-left text-blue-500 py-2">
+      <div className="py-2 text-left text-blue-500">
         <Link href="/menu">back to menu</Link>
       </div>
 
