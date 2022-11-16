@@ -26,7 +26,9 @@ export default function Layout({ title, children }) {
             </div>
           </nav>
         </header>
-        <main className="container m-auto mt-4  text-center">{children}</main>
+        <main className="container m-auto mt-4 px-4 text-center">
+          {children}
+        </main>
         <footer className="flex h-10 items-center justify-center shadow-inner">
           <p>Copyright © 2022 Borderline Pizza</p>
         </footer>
