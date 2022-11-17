@@ -1,11 +1,9 @@
 import React from "react";
 import Layout from "../components/Layout";
-import data from "../utils/data";
 import ProductItem from "../components/ProductItem";
+import clientPromise from "../lib/mongdb.ts";
 
-function MenuScreen() {
-  const products = data.products;
-
+function MenuScreen({ products }) {
   return (
     <Layout title="Menu">
       <div key="menu">
@@ -30,3 +28,18 @@ function MenuScreen() {
 }
 
 export default MenuScreen;
+
+export async function getStaticProps() {
+  try {
+    const client = await clientPromise;
+    const db = client.db("borderline-pizza");
+
+    const products = await db.collection("products").find({}).toArray();
+
+    return {
+      props: { products: JSON.parse(JSON.stringify(products)) },
+    };
+  } catch (err) {
+    console.error(err);
+  }
+}
