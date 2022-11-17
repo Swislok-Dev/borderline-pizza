@@ -85,6 +85,9 @@ export default function ProductItem({ product }) {
   };
 
   const showOptions = (options) => {
+    if (!options) {
+      return;
+    }
     return (
       <div key={options[0]}>
         {Object.entries(options).map((currentValue) => {
