@@ -3,11 +3,19 @@ import Layout from "../components/Layout";
 import ProductItem from "../components/ProductItem";
 import clientPromise from "../lib/mongdb.ts";
 
-function MenuScreen({ products }) {
+function MenuScreen({products}) {
   return (
     <Layout title="Menu">
       <div key="menu">
-        {["Appetizers", "Nachos", "Salads", "Tacos"].map((step, index) => (
+        {[
+          "Pizza",
+          "Appetizers",
+          "Nachos",
+          "Salads",
+          "Tacos",
+          "Burritos",
+          "Enchiladas",
+        ].map((step, index) => (
           <section key={step} className="">
             <h2 className="m-5 text-2xl font-bold ">{step}</h2>
             <article key={step[index]} className="max-w-3/5 ">
@@ -30,16 +38,13 @@ function MenuScreen({ products }) {
 export default MenuScreen;
 
 export async function getStaticProps() {
-  try {
-    const client = await clientPromise;
-    const db = client.db("borderline-pizza");
+  const client = await clientPromise;
+  const db = client.db("borderline-pizza");
 
-    const products = await db.collection("products").find({}).toArray();
+  const products = await db.collection("products").find({}).toArray();
 
-    return {
-      props: { products: JSON.parse(JSON.stringify(products)) },
-    };
-  } catch (err) {
-    console.error(err);
-  }
+  return {
+    props: { products: JSON.parse(JSON.stringify(products)) },
+  };
+ 
 }
