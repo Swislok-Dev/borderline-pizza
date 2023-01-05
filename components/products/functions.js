@@ -93,3 +93,52 @@ export const showOptions = ({ options }) => {
     </div>
   );
 };
+
+const itemDescription = [
+  "pizza",
+  "pizza-toppings",
+  "appetizers",
+  "nachos",
+  "salads",
+  "tacos",
+  "burritos",
+  "enchiladas",
+];
+
+export const showCategoryDescription = ( {category} ) => {
+  if (itemDescription.includes(category)) {
+    switch (category) {
+      case "pizza":
+        return <p>Thin or pan style crust available</p>;
+      case "appetizers":
+        return <p>One cup of Pizza or Nacho Cheese Sauce included</p>
+      case "beverages":
+        console.log(category)
+        return
+      case "specialty-pizza":
+        return (
+          <div>
+            <p>BBQ, 5 Meat*, Taco, Chicken Taco, Chicken Fajita**, Triple Pepperoni</p>
+            <hr/>
+            <p>*includes canadian bacon, pepperoni, hamburger, sausage and bacon</p>
+            <hr/>
+            <p>**includes onion and green pepper</p>
+            <hr/>
+          </div>
+        )
+      case "pizza-toppings":
+        return (
+          <div>
+            <p>*These toppings are not included automatically but are available by request at no additional charge.</p>
+            <br/>
+            <p>Like Supreme Pizza? Try our &quot;Borderline 9&quot;</p>
+          </div>
+        )
+      
+    }
+  }
+};
+
+export const showPizzaToppings = (props) => {
+  console.log(props)
+}
