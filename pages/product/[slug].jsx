@@ -2,12 +2,13 @@ import React from "react";
 import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import Link from "next/link";
-import data from "../../utils/data";
+import clientPromise from '../../lib/mongdb';
 
-export default function ProductScreen() {
+export default function ProductScreen({products}) {
   const { query } = useRouter();
   const { slug } = query;
-  const product = data.products.find((x) => x.slug === slug);
+
+  const product = products.find((x) => x.slug == slug)
 
   if (!product) {
     return <Layout title="Product Not Found">
@@ -29,4 +30,16 @@ export default function ProductScreen() {
       </ul>
     </Layout>
   );
+}
+
+export async function getServerSideProps() {
+  const client = await clientPromise;
+  const db = client.db("borderline-pizza");
+
+  const products = await db.collection("products").find({}).toArray();
+
+  return {
+    props: { products: JSON.parse(JSON.stringify(products)) },
+  };
+ 
 }
