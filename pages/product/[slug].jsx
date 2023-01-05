@@ -11,12 +11,16 @@ export default function ProductScreen({ products }) {
 
   const product = products.find((x) => x.slug == slug);
 
+  const backToMenuLink = () => (
+    <div className="back-to-menu-link py-2 text-left text-blue-500">
+      <Link href="/menu">back to menu</Link>
+    </div>
+  );
+
   if (!product) {
     return (
       <Layout title="Product Not Found">
-        <div className="py-2 text-left text-blue-500">
-          <Link href="/menu">back to menu</Link>
-        </div>
+        {backToMenuLink()}
         Product Not Found
       </Layout>
     );
@@ -24,9 +28,7 @@ export default function ProductScreen({ products }) {
 
   return (
     <Layout title={product.title}>
-      <div className="py-2 text-left text-blue-500">
-        <Link href="/menu">back to menu</Link>
-      </div>
+      {backToMenuLink()}
 
       <div className="flex flex-auto flex-col justify-between">
         <div className="m-auto my-4 max-w-screen-lg rounded-md bg-blue-300 p-2 hover:bg-blue-600 hover:text-gray-200 active:text-red-300">

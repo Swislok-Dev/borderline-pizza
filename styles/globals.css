@@ -19,6 +19,30 @@ a {
   box-sizing: border-box;
 }
 
+.back-button {
+  visibility: visible;
+  font-size: 24px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.back-to-menu-link {
+  visibility: hidden;
+}
+
+@media screen and (min-width: 420px) {
+  .back-button-container {
+    display: none;
+  }
+
+  .back-to-menu-link {
+    visibility: visible;
+  }
+  .back-button {
+    visibility: hidden;
+  }
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

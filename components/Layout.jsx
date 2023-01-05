@@ -27,15 +27,13 @@ export default function Layout({ title, children }) {
       <div className="flex min-h-screen flex-col justify-between">
         <header className="sticky top-0 z-10 w-full bg-white shadow">
           <nav className="z-1 flex h-12 items-center justify-between px-4 ">
-            <BsChevronLeft
-              style={{
-                visibility: isBackButtonVisible,
-                fontSize: "24px",
-                marginRight: "24px",
-                cursor: "pointer",
-              }}
-              onClick={() => router.back()}
-            />
+            <div className="back-button-container">
+              <BsChevronLeft
+                style={{ visibility: isBackButtonVisible }}
+                onClick={() => router.back()}
+                className="back-button"
+              />
+            </div>
 
             <Link href="/">
               <a className="text-lg font-bold">Borderline Pizza</a>
