@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const isObject = function (val) {
   if (val === null) {
     return false;
@@ -34,7 +36,7 @@ export const splitPrices = ({ key, value }) => {
   );
 };
 
-export const showFields = ({ prices, title }) => {
+export const showFields = ({ prices, title, options, slug }) => {
   const show = (prices) => {
     let result = [];
 
@@ -54,6 +56,7 @@ export const showFields = ({ prices, title }) => {
         result.push(splitPrices({ key: val, value: prices[val] }));
       }
     }
+    result.push(showOptions({ options }));
     return result;
   };
   return (
@@ -63,13 +66,20 @@ export const showFields = ({ prices, title }) => {
     >
       {prices.standard ? showMenuItem({ prices, title }) : menuItem({ title })}
       {show(prices)}
+      <div id="show-more-button-container">
+        <Link href={`/product/${slug}`}>
+          <a className="" id="show-more-button">
+            Show More
+          </a>
+        </Link>
+      </div>
     </div>
   );
 };
 
 const showOptionFields = (currentValue) => {
   return (
-    <div key={currentValue} className="flex justify-between">
+    <div key={currentValue} id="options" className="flex justify-between">
       <h4 className="text-left italic">{currentValue[0]}</h4>
 
       <p className="text-right ">
@@ -105,40 +115,47 @@ const itemDescription = [
   "enchiladas",
 ];
 
-export const showCategoryDescription = ( {category} ) => {
+export const showCategoryDescription = ({ category }) => {
   if (itemDescription.includes(category)) {
     switch (category) {
       case "pizza":
         return <p>Thin or pan style crust available</p>;
       case "appetizers":
-        return <p>One cup of Pizza or Nacho Cheese Sauce included</p>
+        return <p>One cup of Pizza or Nacho Cheese Sauce included</p>;
       case "beverages":
-        console.log(category)
-        return
+        console.log(category);
+        return;
       case "specialty-pizza":
         return (
           <div>
-            <p>BBQ, 5 Meat*, Taco, Chicken Taco, Chicken Fajita**, Triple Pepperoni</p>
-            <hr/>
-            <p>*includes canadian bacon, pepperoni, hamburger, sausage and bacon</p>
-            <hr/>
+            <p>
+              BBQ, 5 Meat*, Taco, Chicken Taco, Chicken Fajita**, Triple
+              Pepperoni
+            </p>
+            <hr />
+            <p>
+              *includes canadian bacon, pepperoni, hamburger, sausage and bacon
+            </p>
+            <hr />
             <p>**includes onion and green pepper</p>
-            <hr/>
+            <hr />
           </div>
-        )
+        );
       case "pizza-toppings":
         return (
           <div>
-            <p>*These toppings are not included automatically but are available by request at no additional charge.</p>
-            <br/>
+            <p>
+              *These toppings are not included automatically but are available
+              by request at no additional charge.
+            </p>
+            <br />
             <p>Like Supreme Pizza? Try our &quot;Borderline 9&quot;</p>
           </div>
-        )
-      
+        );
     }
   }
 };
 
 export const showPizzaToppings = (props) => {
-  console.log(props)
-}
+  console.log(props);
+};
