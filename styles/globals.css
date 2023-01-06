@@ -19,6 +19,22 @@ a {
   box-sizing: border-box;
 }
 
+#show-more-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+#show-more-button {
+  position: absolute;
+  font-size: 30px;
+  bottom: -30px;
+  background-color: black;
+  opacity: 0;
+
+  /* Possible shape to use. Will determine after recieving feedback */
+  /* clip-path: polygon(0 40%, 50% 60%, 100% 40%, 100% 50%, 50% 70%, 0 50%); */
+}
+
 .back-button {
   visibility: visible;
   font-size: 24px;
@@ -43,6 +59,27 @@ a {
   }
 }
 
+.menu-item {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  box-sizing: content-box;
+  margin-bottom: 50px;
+  @apply max-w-screen-lg rounded-md bg-blue-300 p-2 pb-5;
+}
+
+.menu-item::before {
+  content: "";
+  position: absolute;
+  box-shadow: inset 10px 10px 10px -10px black;
+  background-color: inherit;
+  display: block;
+  height: 150px;
+  width: 150px;
+  bottom: -150px;
+  transform: rotate(90deg);
+  clip-path: polygon(20% 50%, 0% 100%, 0% 0%);
+}
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
