@@ -1,5 +1,3 @@
-import Link from "next/link";
-import {BsChevronDown} from "react-icons/bs"
 
 export const isObject = function (val) {
   if (val === null) {
@@ -33,47 +31,6 @@ export const splitPrices = ({ key, value }) => {
     <div key={key} className="flex justify-between">
       <h3 className=" text-left">{key[0].toUpperCase() + key.slice(1)}</h3>
       <p className=" text-right text-xl font-bold">{"$" + value.toFixed(2)}</p>
-    </div>
-  );
-};
-
-export const showFields = ({ prices, title, options, slug }) => {
-  const show = (prices) => {
-    let result = [];
-
-    for (let val in prices) {
-      if (val === "standard") {
-        return;
-      } else if (isObject(prices[val])) {
-        result.push(
-          <div key={val} className="">
-            <p className="text-left font-semibold text-gray-100">
-              {val[0].toUpperCase() + val.slice(1)}
-            </p>
-            {show(prices[val])}
-          </div>
-        );
-      } else {
-        result.push(splitPrices({ key: val, value: prices[val] }));
-      }
-    }
-    result.push(showOptions({ options }));
-    return result;
-  };
-  return (
-    <div
-      key={menuItem({ title }) && prices}
-      className="flex flex-auto flex-col justify-between"
-    >
-      {prices.standard ? showMenuItem({ prices, title }) : menuItem({ title })}
-      {show(prices)}
-      <div id="show-more-button-container">
-        <Link href={`/product/${slug}`}>
-          <a className="" id="show-more-button">
-            <BsChevronDown>Sow</BsChevronDown>
-          </a>
-        </Link>
-      </div>
     </div>
   );
 };

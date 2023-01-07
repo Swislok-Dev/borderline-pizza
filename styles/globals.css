@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 a:active {
   -webkit-tap-highlight-color: transparent;
 }
