@@ -31,12 +31,9 @@ a:active {
 #show-more-button {
   position: absolute;
   font-size: 30px;
-  bottom: -30px;
-  background-color: black;
-  opacity: 0;
-
-  /* Possible shape to use. Will determine after recieving feedback */
-  /* clip-path: polygon(0 40%, 50% 60%, 100% 40%, 100% 50%, 50% 70%, 0 50%); */
+  bottom: -40px;
+  padding: 10px 40px;
+  opacity: 0.5;
 }
 
 .back-button {
@@ -70,7 +67,7 @@ a:active {
   position: relative;
   box-sizing: content-box;
   margin-bottom: 50px;
-  @apply max-w-screen-lg rounded-md bg-blue-300 p-2 pb-5;
+  @apply max-w-screen-lg rounded-md bg-blue-300 p-2 ;
 }
 
 .menu-item::before {
