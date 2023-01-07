@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {BsChevronDown} from "react-icons/bs"
 
 export const isObject = function (val) {
   if (val === null) {
@@ -69,7 +70,7 @@ export const showFields = ({ prices, title, options, slug }) => {
       <div id="show-more-button-container">
         <Link href={`/product/${slug}`}>
           <a className="" id="show-more-button">
-            Show More
+            <BsChevronDown>Sow</BsChevronDown>
           </a>
         </Link>
       </div>
