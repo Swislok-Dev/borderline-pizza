@@ -66,7 +66,7 @@ export default function ProductItem({ product }) {
     <>
       <div
         key={slug}
-        className="menu-item max-w-screen-lg rounded-md bg-blue-300 p-2"
+        className="menu-item"
       >
         {showFields({ prices, title, options, slug })}
       </div>

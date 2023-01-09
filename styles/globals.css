@@ -70,8 +70,9 @@ a:active {
   justify-content: center;
   position: relative;
   box-sizing: content-box;
-  margin-bottom: 50px;
-  @apply max-w-screen-lg rounded-md bg-blue-300 p-2 ;
+  margin: 0 auto 60px auto;
+
+  @apply max-w-screen-lg rounded-md bg-blue-300 p-2;
 }
 
 .menu-item::before {
@@ -86,6 +87,7 @@ a:active {
   transform: rotate(90deg);
   clip-path: polygon(20% 50%, 0% 100%, 0% 0%);
 }
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
