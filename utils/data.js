@@ -243,31 +243,28 @@ const data = {
       slug: "enchilada-dinner",
     },
 
-    // pizza
+    // specialty-pizza
+    {
+      title: "Specialty Pizzas",
+      category: "specialty pizza",
+      prices: {
+        'Small 9"': 10,
+        'Medium 13"': 19,
+        'Large 15"': 23,
+      },
+      options: {
+        Choices: [
+          "BBQ | ",
+          "5 Meat | ",
+          "Taco | ",
+          "Chicken Taco | ",
+          "Chicken Fajita",
+        ],
+      },
+      slug: "specialty-pizza",
+    },
 
-    // {
-    //   title: "Sizes",
-    //   category: "pizza",
-    //   prices: {
-    //     Small: {
-    //       Cheese: 7,
-    //       "1-14 Toppings": 9,
-    //       Extras: 1,
-    //     },
-    //     Medium: {
-    //       Cheese: 12,
-    //       "1-14 Toppings": 15,
-    //       Extras: 1.5,
-    //     },
-    //     Large: {
-    //       Cheese: 14,
-    //       "1-14 Toppings": 18,
-    //       Extras: 2,
-    //     },
-    //   },
-    //   options: {},
-    //   slug: "small-medium-large-pizza",
-    // },
+    // pizza
 
     {
       title: 'Small 9"',

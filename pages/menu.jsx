@@ -8,6 +8,7 @@ function MenuScreen({products}) {
     <Layout title="Menu">
       <div key="menu">
         {[
+          "Specialty Pizza",
           "Pizza",
           "Appetizers",
           "Nachos",
