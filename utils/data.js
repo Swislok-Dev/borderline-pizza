@@ -11,7 +11,7 @@ const data = {
       title: "Bread Sticks",
       category: "appetizers",
       prices: {
-        standard: 4.5,
+        standard: 5,
       },
       options: {},
       slug: "bread-sticks",
@@ -20,7 +20,7 @@ const data = {
       title: "Cheese Sticks",
       category: "appetizers",
       prices: {
-        standard: 6.5,
+        standard: 7,
       },
       options: {},
       slug: "cheese-sticks",
@@ -29,7 +29,7 @@ const data = {
       title: "Bacon Cheddar Cheese Sticks",
       category: "appetizers",
       prices: {
-        standard: 9.0,
+        standard: 9,
       },
       options: {
         "Extra Sauce": 1,
@@ -40,12 +40,12 @@ const data = {
       title: "Cheese Bread or Garlic Cheese Bread",
       category: "appetizers",
       prices: {
-        small: 6.5,
-        medium: 9.0,
-        large: 12.0,
+        small: 7,
+        medium: 9,
+        large: 12,
       },
       options: {
-        "Extra Sauce": 1.0,
+        "Extra Sauce": 1,
       },
       slug: "cheese-bread-or-garlic-cheese-bread",
     },
@@ -57,7 +57,7 @@ const data = {
       category: "nachos",
       prices: {
         small: 2.5,
-        large: 3.75,
+        large: 4,
       },
       options: {},
       slug: "nachos-or-chips-and-salsa",
@@ -66,8 +66,8 @@ const data = {
       title: "Meaty Nachos",
       category: "nachos",
       prices: {
-        small: 3.5,
-        large: 6.25,
+        small: 4,
+        large: 7,
       },
       options: {},
       slug: "meaty-nachos",
@@ -76,8 +76,8 @@ const data = {
       title: "Super Nachos",
       category: "nachos",
       prices: {
-        small: 5.0,
-        large: 8.0,
+        small: 6,
+        large: 9,
       },
       options: {},
       slug: "super-nachos",
@@ -86,8 +86,8 @@ const data = {
       title: "Super Duper Nachos",
       category: "nachos",
       prices: {
-        small: 6.0,
-        large: 9.0,
+        small: 7,
+        large: 10,
       },
       options: {},
       slug: "super-duper-nachos",
@@ -99,10 +99,10 @@ const data = {
       title: "Garden Salad",
       category: "salads",
       prices: {
-        "Ranch or French Dressing": 2.75,
+        "Ranch or French Dressing": 4,
       },
       options: {
-        "Add Chicken": 4.0,
+        "Add Chicken": 6,
       },
       slug: "garden-salad",
     },
@@ -111,12 +111,8 @@ const data = {
       category: "salads",
       prices: {
         beef: {
-          small: 5.0,
-          large: 8.0,
-        },
-        chicken: {
-          small: 5.5,
-          large: 8.5,
+          small: 6,
+          large: 9,
         },
       },
       options: {},
@@ -129,7 +125,7 @@ const data = {
       title: "Hard Taco",
       category: "tacos",
       prices: {
-        "Beef, Chicken or BBQ": 1.5,
+        "Beef, Chicken or BBQ": 1.75,
       },
       options: {},
       slug: "hard-taco",
@@ -138,7 +134,7 @@ const data = {
       title: "Baby Soft Taco",
       category: "tacos",
       prices: {
-        "Beef, Chicken or BBQ": 1.5,
+        "Beef, Chicken or BBQ": 1.75,
       },
       options: {},
       slug: "baby-soft-taco",
@@ -147,8 +143,8 @@ const data = {
       title: "Soft Taco",
       category: "tacos",
       prices: {
-        beef: 3.5,
-        "Chicken, Chicken Ranch or BBQ": 4.0,
+        beef: 4,
+        "Chicken, Chicken Ranch or BBQ": 4,
       },
       options: {},
       slug: "soft-taco",
@@ -157,8 +153,8 @@ const data = {
       title: "Super Taco",
       category: "tacos",
       prices: {
-        beef: 4.5,
-        "Chicken, Chicken Ranch or BBQ": 5.0,
+        beef: 5,
+        "Chicken, Chicken Ranch or BBQ": 5,
       },
       options: {},
       slug: "super-taco",
@@ -167,8 +163,8 @@ const data = {
       title: "Soft Taco Dinner",
       category: "tacos",
       prices: {
-        beef: 6,
-        "Chicken, Chicken Ranch or BBQ": 6.5,
+        beef: 8,
+        "Chicken, Chicken Ranch or BBQ": 8,
       },
       options: {},
       slug: "soft-taco-dinner",
@@ -180,7 +176,7 @@ const data = {
       title: "Baby Burrito",
       category: "burritos",
       prices: {
-        "Beef, Bean, Chickon or BBQ": 1.5,
+        "Beef, Bean, Chickon or BBQ": 1.75,
       },
       options: {},
       slug: "baby-burrito",
@@ -189,8 +185,8 @@ const data = {
       title: "Burrito",
       category: "burritos",
       prices: {
-        "Beef, Bean, Beef & Bean": 3.5,
-        "Chicken, Chicken Ranch or BBQ": 4.0,
+        "Beef, Bean, Beef & Bean": 4,
+        "Chicken, Chicken Ranch or BBQ": 4,
       },
       options: {},
       slug: "burrito",
@@ -199,8 +195,8 @@ const data = {
       title: "Super Burrito",
       category: "burritos",
       prices: {
-        "Beef, Bean, Beef & Bean": 5.0,
-        "Chicken, Chicken Ranch or BBQ": 6.0,
+        "Beef, Bean, Beef & Bean": 6,
+        "Chicken, Chicken Ranch or BBQ": 6,
       },
       options: {},
       slug: "super-burrito",
@@ -209,8 +205,8 @@ const data = {
       title: "Burrito Dinner",
       category: "burritos",
       prices: {
-        "Beef, Bean, Beef & Bean": 6.0,
-        "Chicken, Chicken Ranch or BBQ": 6.5,
+        "Beef, Bean, Beef & Bean": 8,
+        "Chicken, Chicken Ranch or BBQ": 8,
       },
       options: {},
       slug: "burrito-dinner",
@@ -222,7 +218,7 @@ const data = {
       title: "Enchilada",
       category: "enchiladas",
       prices: {
-        "Beef or Chicken": 4.0,
+        "Beef or Chicken": 5,
       },
       options: {},
       slug: "enchilada",
@@ -231,7 +227,7 @@ const data = {
       title: "Super Enchilada",
       category: "enchiladas",
       prices: {
-        "Beef or Chicken": 5.0,
+        "Beef or Chicken": 6,
       },
       options: {},
       slug: "super-enchilada",
@@ -240,8 +236,8 @@ const data = {
       title: "Enchilada Dinner",
       category: "enchiladas",
       prices: {
-        Beef: 6.0,
-        Chicken: 6.5,
+        Beef: 8,
+        Chicken: 8,
       },
       options: {},
       slug: "enchilada-dinner",
@@ -249,39 +245,39 @@ const data = {
 
     // pizza
 
-    {
-      title: "Sizes",
-      category: "pizza",
-      prices: {
-        Small: {
-          Cheese: 7.0,
-          "1-14 Toppings": 9.0,
-          Extras: 1.0,
-        },
-        Medium: {
-          Cheese: 12.0,
-          "1-14 Toppings": 15.0,
-          Extras: 1.5,
-        },
-        Large: {
-          Cheese: 14.0,
-          "1-14 Toppings": 18.0,
-          Extras: 2.0,
-        },
-      },
-      options: {},
-      slug: "small-medium-large-pizza",
-    },
+    // {
+    //   title: "Sizes",
+    //   category: "pizza",
+    //   prices: {
+    //     Small: {
+    //       Cheese: 7,
+    //       "1-14 Toppings": 9,
+    //       Extras: 1,
+    //     },
+    //     Medium: {
+    //       Cheese: 12,
+    //       "1-14 Toppings": 15,
+    //       Extras: 1.5,
+    //     },
+    //     Large: {
+    //       Cheese: 14,
+    //       "1-14 Toppings": 18,
+    //       Extras: 2,
+    //     },
+    //   },
+    //   options: {},
+    //   slug: "small-medium-large-pizza",
+    // },
 
     {
       title: 'Small 9"',
       category: "pizza",
       prices: {
-        Cheese: 7.0,
-        "1-14 Toppings": 9.0,
+        Cheese: 7,
+        "1-14 Toppings": 9,
       },
       options: {
-        Extras: 1.0,
+        Extras: 1,
       },
       slug: "small-pizza",
     },
@@ -289,8 +285,8 @@ const data = {
       title: 'Medium 13"',
       category: "pizza",
       prices: {
-        Cheese: 12.0,
-        "1-14 Toppings": 15.0,
+        Cheese: 13,
+        "1-14 Toppings": 16,
       },
       options: {
         Extras: 1.5,
@@ -301,11 +297,11 @@ const data = {
       title: 'Large 15"',
       category: "pizza",
       prices: {
-        Cheese: 14.0,
-        "1-14 Toppings": 18.0,
+        Cheese: 16,
+        "1-14 Toppings": 20.0,
       },
       options: {
-        Extras: 2.0,
+        Extras: 2,
       },
       slug: "large-pizza",
     },
@@ -338,9 +334,9 @@ const data = {
     ],
     options: {
       "Add Bacon": {
-        Small: 1.0,
-        Medium: 2.0,
-        Large: 3.0,
+        Small: 1,
+        Medium: 2,
+        Large: 3,
       },
     },
   },
