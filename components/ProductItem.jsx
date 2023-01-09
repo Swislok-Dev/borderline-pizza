@@ -19,7 +19,7 @@ export default function ProductItem({ product }) {
   const showMore = () => {
     setIsMoreShown(!isMoreShown);
   };
-  const showFields = ({ prices, title, options, slug }) => {
+  const showFields = ({ prices, title, options }) => {
     const show = (prices) => {
       let result = [];
 
