@@ -49,11 +49,11 @@ const showOptionFields = (currentValue) => {
 };
 
 export const showOptions = ({ options }) => {
-  if (!options) {
-    return;
+  if (!Object.keys(options).length > 0) {
+    return
   }
   return (
-    <div key={options[0]}>
+    <div key={options}>
       {Object.entries(options).map((currentValue) => {
         return showOptionFields(currentValue);
       })}
