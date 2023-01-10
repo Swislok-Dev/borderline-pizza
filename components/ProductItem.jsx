@@ -5,16 +5,13 @@ import {
   menuItem,
   showOptions,
   showMenuItem,
+  showSelection,
 } from "./products/functions";
 import { BsChevronDown } from "react-icons/bs";
 
 export default function ProductItem({ product }) {
-  const { title, prices, options, slug } = product;
+  const { title, prices, options, selection, slug } = product;
   const [isMoreShown, setIsMoreShown] = React.useState(false);
-
-  React.useEffect(() => {
-    console.log(isMoreShown);
-  });
 
   const showMore = () => {
     setIsMoreShown(!isMoreShown);
@@ -51,7 +48,7 @@ export default function ProductItem({ product }) {
           ? showMenuItem({ prices, title })
           : menuItem({ title })}
         {show(prices)}
-        {isMoreShown ? <div>More shown</div> : null}
+        {isMoreShown ? <div>{showSelection({ selection })}</div> : null}
 
         <div id="show-more-button-container">
           <button onClick={showMore} className="" id="show-more-button">
@@ -64,10 +61,7 @@ export default function ProductItem({ product }) {
 
   return (
     <>
-      <div
-        key={slug}
-        className="menu-item"
-      >
+      <div key={slug} className="menu-item">
         {showFields({ prices, title, options, slug })}
       </div>
     </>

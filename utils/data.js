@@ -252,8 +252,9 @@ const data = {
         'Medium 13"': 19,
         'Large 15"': 23,
       },
-      options: {
-        Choices: [
+      options: {},
+      selection: {
+        choices: [
           "BBQ | ",
           "5 Meat | ",
           "Taco | ",

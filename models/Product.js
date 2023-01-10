@@ -7,7 +7,8 @@ const productSchema = new mongoose.Schema(
     slug: { type: String, required: true, unique: true },
     category: { type: String, required: true },
     options: { type: Object, required: false },
-    description: {type: String, required: false}
+    description: { type: String, required: false },
+    selection: { type: Object, required: false },
   },
   {
     timestamps: true,
