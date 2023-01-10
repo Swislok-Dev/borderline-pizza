@@ -1,4 +1,3 @@
-
 export const isObject = function (val) {
   if (val === null) {
     return false;
@@ -60,6 +59,17 @@ export const showOptions = ({ options }) => {
       })}
     </div>
   );
+};
+
+export const showSelection = ({selection}) => {
+  if (!selection) {
+    return;
+  }
+
+  return <div key={selection}>
+    <h4>Availble Choices</h4>
+    <p>{selection.choices.map(item => item)}</p>
+    </div>;
 };
 
 const itemDescription = [
