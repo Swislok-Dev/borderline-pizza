@@ -253,15 +253,7 @@ const data = {
         'Large 15"': 23,
       },
       options: {},
-      selection: {
-        choices: [
-          "BBQ | ",
-          "5 Meat | ",
-          "Taco | ",
-          "Chicken Taco | ",
-          "Chicken Fajita",
-        ],
-      },
+      selection: {},
       slug: "specialty-pizza",
     },
 
