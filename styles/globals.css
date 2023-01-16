@@ -10,6 +10,10 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+h2 {
+  font-size: 20px;
+}
+
 h4 {
   font-size: 18px;
 }
@@ -29,6 +33,7 @@ a:active {
 
 * {
   box-sizing: border-box;
+  font-weight: 350;
 }
 
 #hero {
@@ -96,6 +101,14 @@ a:active {
   bottom: -150px;
   transform: rotate(90deg);
   clip-path: polygon(20% 50%, 0% 100%, 0% 0%);
+}
+
+.additional-fields-heading {
+  font-weight: 300;
+  text-decoration-line: underline;
+  margin: 16px auto;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 /* @media (prefers-color-scheme: dark) {

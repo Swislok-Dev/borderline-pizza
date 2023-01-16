@@ -68,7 +68,7 @@ export const showSelection = ({ selection }) => {
 
   return (
     <div key={selection}>
-      <h4>Availble Choices</h4>
+      <h2 className="additional-fields-heading">Availble Choices</h2>
       {/* <p>{selection.choices.map((item) => item)}</p> */}
     </div>
   );
@@ -135,8 +135,7 @@ export const showCategoryDescription = ({ category }) => {
       case "pizza":
         return (
           <>
-            <h3>Thin or pan style crust available</h3>
-            <h2 className="text-xl underline">Availble Toppings</h2>
+            <h2 className="additional-fields-heading">Availble Toppings</h2>
             {pizzaToppings.map((value, index) => {
               return (
                 <div key={pizzaToppings[index]} className="grid grid-cols-2">
@@ -144,23 +143,26 @@ export const showCategoryDescription = ({ category }) => {
                 </div>
               );
             })}
-            <p>
+            <p className="m-4">
               *These toppings are not included automatically but are available
               by request at no additional charge.
             </p>
+            <h3>Thin or pan style crust available</h3>
             <br />
             <p>Like Supreme Pizza? Try our &quot;Borderline 9&quot;</p>
           </>
         );
       case "appetizers":
-        return <p>One cup of Pizza or Nacho Cheese Sauce included</p>;
+        return (
+          <p className="m-2">One cup of Pizza or Nacho Cheese Sauce included</p>
+        );
       case "beverages":
         console.log(category);
         return;
       case "specialty pizza":
         return (
           <div className="m-2">
-            <p className="font-semibold">
+            <p className="my-2 font-semibold">
               BBQ | 5 Meat* | Beef Taco | Chicken Taco | Chicken Fajita** |
               Triple Pepperoni | Borderline 9 | &quot;The Everything&quot;
             </p>
