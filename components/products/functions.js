@@ -49,7 +49,7 @@ const showOptionFields = (currentValue) => {
 };
 
 export const showOptions = ({ options }) => {
-  if (!Object.keys(options).length > 0) {
+  if (options == undefined || !options) {
     return;
   }
   return (
