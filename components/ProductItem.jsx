@@ -5,7 +5,6 @@ import {
   menuItem,
   showOptions,
   showMenuItem,
-  showSelection,
   showCategoryDescription,
 } from "./products/functions";
 import { BsChevronDown } from "react-icons/bs";
@@ -41,10 +40,9 @@ export default function ProductItem({ product }) {
       return result;
     };
 
-    const showAdditionalFields = ({ category, selection }) => {
+    const showAdditionalFields = ({ category }) => {
       return (
         <>
-          {showSelection({ selection })}
           {showCategoryDescription({ category })}
         </>
       );
