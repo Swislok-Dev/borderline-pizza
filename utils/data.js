@@ -110,10 +110,8 @@ const data = {
       title: "Taco Salad",
       category: "salads",
       prices: {
-        beef: {
-          small: 6,
-          large: 9,
-        },
+        small: 6,
+        large: 9,
       },
       options: {},
       slug: "taco-salad",
@@ -236,8 +234,7 @@ const data = {
       title: "Enchilada Dinner",
       category: "enchiladas",
       prices: {
-        Beef: 8,
-        Chicken: 8,
+        "Beef or Chicken": 8,
       },
       options: {},
       slug: "enchilada-dinner",
@@ -295,41 +292,7 @@ const data = {
       },
       slug: "large-pizza",
     },
-
-    // toppings
-    {
-      title: "Toppings",
-      category: "pizza-toppings",
-      prices: { standard: 1 },
-      options: ["Canadian Bacon"],
-      slug: "toppings",
-    },
   ],
-  "pizza-toppings": {
-    category: "pizza-toppings",
-    selection: [
-      "Canadian Bacon",
-      "Pepperoni",
-      "Hamburger",
-      "Sausage",
-      "Jalapeno*",
-      "Diced Tomato*",
-      "Green Olives",
-      "Black Olives",
-      "Onion",
-      "Mixed Peppers",
-      "Mushroom",
-      "Pineapple",
-      "Sauerkraut",
-    ],
-    options: {
-      "Add Bacon": {
-        Small: 1,
-        Medium: 2,
-        Large: 3,
-      },
-    },
-  },
 };
 
 export default data;
