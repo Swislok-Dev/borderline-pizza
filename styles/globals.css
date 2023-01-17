@@ -103,12 +103,17 @@ a:active {
   clip-path: polygon(20% 50%, 0% 100%, 0% 0%);
 }
 
+.additional-fields {
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  margin: 16px auto;
+  padding-bottom: 16px;
+}
+
 .additional-fields-heading {
   font-weight: 300;
   text-decoration-line: underline;
   margin: 16px auto;
-  padding-top: 8px;
-  border-top: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 /* @media (prefers-color-scheme: dark) {
