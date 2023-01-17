@@ -102,32 +102,16 @@ const pizzaToppings = [
   "Sauerkraut",
 ];
 
-function isEven(number) {
-  return number % 2 == 0 ? true : false;
-}
-
-const twoLists = (value, index, array) => {
-  function makeEven(num) {
-    while (isEven(num)) {
-      return num;
-    }
-  }
-  function makeOdd(num) {
-    while (isEven(num)) {
-      return num + 1;
-    }
-  }
-
-  let evenValue = array[makeEven(index)];
-  let oddValue = array[makeOdd(index)];
-
-  return (
-    <>
-      <p>{evenValue}</p>
-      <p>{oddValue}</p>
-    </>
-  );
-};
+const specialtyPizzas = [
+  "BBQ",
+  "5 Meat*",
+  "Beef Taco",
+  "Chicken Taco",
+  "Chicken Fajita**",
+  "Triple Pepperoni",
+  "Borderline 9",
+  "The Everything",
+];
 
 export const showCategoryDescription = ({ category }) => {
   if (itemDescription.includes(category)) {
@@ -135,26 +119,35 @@ export const showCategoryDescription = ({ category }) => {
       case "pizza":
         return (
           <>
-            <h2 className="additional-fields-heading">Availble Toppings</h2>
-            {pizzaToppings.map((value, index) => {
-              return (
-                <div key={pizzaToppings[index]} className="grid grid-cols-2">
-                  {twoLists(value, index, pizzaToppings)}
-                </div>
-              );
-            })}
-            <p className="m-4">
+            <section className="additional-fields">
+              <h2 className="additional-fields-heading">Availble Toppings</h2>
+              <div className="grid grid-cols-2">
+                {pizzaToppings.map((el) => {
+                  return (
+                    <p className="font-semibold" key={el}>
+                      {el}
+                    </p>
+                  );
+                })}
+              </div>
+            </section>
+
+            <p className="m-2">Thin or pan style crust available</p>
+            <p className="m-2">
               *These toppings are not included automatically but are available
               by request at no additional charge.
             </p>
-            <h3>Thin or pan style crust available</h3>
             <br />
-            <p>Like Supreme Pizza? Try our &quot;Borderline 9&quot;</p>
+            <p className="font-medium">
+              Like Supreme Pizza? Try our &quot;Borderline 9&quot;
+            </p>
           </>
         );
       case "appetizers":
         return (
-          <p className="m-2">One cup of Pizza or Nacho Cheese Sauce included</p>
+          <p className="m-2 border-t border-black">
+            One cup of Pizza or Nacho Cheese Sauce included
+          </p>
         );
       case "beverages":
         console.log(category);
@@ -162,10 +155,20 @@ export const showCategoryDescription = ({ category }) => {
       case "specialty pizza":
         return (
           <div className="m-2">
-            <p className="my-2 font-semibold">
-              BBQ | 5 Meat* | Beef Taco | Chicken Taco | Chicken Fajita** |
-              Triple Pepperoni | Borderline 9 | &quot;The Everything&quot;
-            </p>
+            <section className="additional-fields">
+              <h2 className="additional-fields-heading">Availble Choices</h2>
+
+              <div className="grid grid-cols-2">
+                {specialtyPizzas.map((el) => {
+                  return (
+                    <p className="font-semibold" key={el}>
+                      {el}
+                    </p>
+                  );
+                })}
+              </div>
+            </section>
+
             <p>
               *includes canadian bacon, pepperoni, hamburger, sausage and bacon
             </p>
