@@ -61,8 +61,8 @@ export default function ProductItem({ product }) {
           <div>{showAdditionalFields({ category, selection })}</div>
         ) : null}
 
-        <div id="show-more-button-container">
-          <button onClick={showMore} className="" id="show-more-button">
+        <div className="show-more-button-container">
+          <button onClick={showMore}  aria-label="show-more" className="show-more-button">
             <BsChevronDown />
           </button>
         </div>

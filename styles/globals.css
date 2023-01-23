@@ -42,12 +42,12 @@ a:active {
   gap: 16px;
 }
 
-#show-more-button-container {
+.show-more-button-container {
   display: flex;
   justify-content: center;
 }
 
-#show-more-button {
+.show-more-button {
   position: absolute;
   font-size: 30px;
   bottom: -40px;
