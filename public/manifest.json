@@ -1,0 +1,14 @@
+{
+  "name": "Borderline Pizza",
+  "short_name": "Borderline Pizza",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/favicon/favicon.png",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ]
+}
