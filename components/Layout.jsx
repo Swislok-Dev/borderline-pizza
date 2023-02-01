@@ -21,7 +21,7 @@ export default function Layout({ title, children }) {
           {title ? title + "- Borderline Pizza" : "Borderline Pizza"}
         </title>
         <meta name="description" content="Pizza Restaurant Website" />
-        <link rel="icon" href="/favicon/favicon.png"/>
+        <link rel="icon" href="/favicon/favicon.png" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
 
