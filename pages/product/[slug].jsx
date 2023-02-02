@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import Link from "next/link";
-import clientPromise from "../../lib/mongdb";
+import clientPromise from "../../lib/mongodb";
 import { showCategoryDescription } from "../../components/products/functions";
 
 export default function ProductScreen({ products }) {
