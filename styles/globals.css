@@ -6,20 +6,23 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
 }
 
 h1 {
+  font-family: "Montserrat", sans-serif;
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
 
-h3 {
+h2 {
   font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
 }
 
-h2 {
+h3 {
   font-size: 1.5rem;
 }
 
@@ -154,8 +157,8 @@ footer {
 
 .category-heading {
   margin-bottom: 1rem;
-  font-weight: 700;
-  line-height: 2rem;
+  font-weight: 600;
+  font-family: "Source Sans Pro";
 }
 
 .menu-item {

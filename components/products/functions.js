@@ -68,7 +68,7 @@ export const showSelection = ({ selection }) => {
 
   return (
     <div key={selection}>
-      <h2 className="additional-fields-heading">Available Choices</h2>
+      <h3 className="additional-fields-heading">Available Choices</h3>
       {/* <p>{selection.choices.map((item) => item)}</p> */}
     </div>
   );
@@ -120,7 +120,7 @@ export const showCategoryDescription = ({ category }) => {
         return (
           <>
             <section className="additional-fields">
-              <h2 className="additional-fields-heading">Available Toppings</h2>
+              <h3 className="additional-fields-heading">Available Toppings</h3>
               <div className="grid grid-cols-2">
                 {pizzaToppings.map((el) => {
                   return (
@@ -156,7 +156,7 @@ export const showCategoryDescription = ({ category }) => {
         return (
           <div className="m-2">
             <section className="additional-fields">
-              <h2 className="additional-fields-heading">Availble Choices</h2>
+              <h3 className="additional-fields-heading">Available Choices</h3>
 
               <div className="grid grid-cols-2">
                 {specialtyPizzas.map((el) => {

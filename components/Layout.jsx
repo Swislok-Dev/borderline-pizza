@@ -23,6 +23,10 @@ export default function Layout({ title, children }) {
         <meta name="description" content="Pizza Restaurant Website" />
         <link rel="icon" href="/favicon/favicon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <style>
+          @import
+          url(https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro:wght@400;600;700&display=swap);
+        </style>
       </Head>
 
       <div id="content">
@@ -38,7 +42,7 @@ export default function Layout({ title, children }) {
 
             <Link href="/">
               <a>
-                <h4 id="home-link">Borderline Pizza</h4>
+                <h2 id="home-link">Borderline Pizza</h2>
               </a>
             </Link>
 
