@@ -10,12 +10,22 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
 h2 {
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 a {
@@ -36,6 +46,39 @@ a:active {
   font-weight: 350;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: rgb(250 250 250);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+nav {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+}
+
+#home-link {
+  font-weight: 700;
+}
+
+main {
+  margin: auto 1rem;
+  padding: 0 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+article {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
 footer {
   display: flex;
   align-items: center;
@@ -43,7 +86,15 @@ footer {
   position: relative;
   bottom: 0;
   height: 2.5em;
+  background-color: rgb(250 250 250);
   box-shadow: inset 0 4px 4px -4px rgb(0 0 0 / 0.3);
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 #hero {
@@ -53,11 +104,13 @@ footer {
 }
 
 #store-info {
+  color: blue;
   font-size: 22px;
   line-height: 2em;
 }
 
 #store-hours {
+  margin: 1rem auto;
   line-height: 1.2em;
 }
 
@@ -97,6 +150,12 @@ footer {
   .back-button {
     visibility: hidden;
   }
+}
+
+.category-heading {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 2rem;
 }
 
 .menu-item {

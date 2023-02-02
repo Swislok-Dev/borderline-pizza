@@ -25,9 +25,9 @@ export default function Layout({ title, children }) {
         <link rel="manifest" href="/manifest.json" />
       </Head>
 
-      <div className="flex min-h-screen flex-col justify-between">
-        <header className="sticky top-0 z-10 w-full bg-white shadow">
-          <nav className="z-1 flex h-12 items-center justify-between px-4 ">
+      <div id="content">
+        <header>
+          <nav>
             <div className="back-button-container">
               <BsChevronLeft
                 style={{ visibility: isBackButtonVisible }}
@@ -37,17 +37,19 @@ export default function Layout({ title, children }) {
             </div>
 
             <Link href="/">
-              <a className="text-lg font-bold">Borderline Pizza</a>
+              <a>
+                <h4 id="home-link">Borderline Pizza</h4>
+              </a>
             </Link>
 
             <Link href="/menu">
-              <a className="">Menu</a>
+              <a>Menu</a>
             </Link>
           </nav>
         </header>
-        <main className="container m-auto mt-4 px-4 text-center">
-          {children}
-        </main>
+
+        <main>{children}</main>
+
         <footer>
           <p>Copyright © 2022 Borderline Pizza</p>
         </footer>
