@@ -25,10 +25,10 @@ export default function ProductItem({ product }) {
           return;
         } else if (isObject(prices[val])) {
           result.push(
-            <div key={val} className="">
-              <p className="text-left font-semibold text-gray-100">
+            <div key={val}>
+              <h4 className="text-left font-semibold text-xl text-gray-700">
                 {val[0].toUpperCase() + val.slice(1)}
-              </p>
+              </h4>
               {show(prices[val])}
             </div>
           );
