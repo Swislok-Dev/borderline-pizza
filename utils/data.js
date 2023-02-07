@@ -287,41 +287,66 @@ const data = {
     // pizza
 
     {
-      title: 'Small 9"',
+      title: "",
       category: "pizza",
       prices: {
-        Cheese: 7,
-        "1-14 Toppings": 9,
+        'Small 9"': {
+          Cheese: 7,
+          "1-14 Toppings": 9,
+          Extras: 1,
+        },
+        'Medium 13"': {
+          Cheese: 13,
+          "1-14 Toppings": 16,
+          Extras: 1.5,
+        },
+
+        'Large 15"': {
+          Cheese: 16,
+          "1-14 Toppings": 20.0,
+          Extras: 2,
+        },
       },
-      options: {
-        Extras: 1,
-      },
-      slug: "small-pizza",
+      options: {},
+      slug: "pizzas",
     },
-    {
-      title: 'Medium 13"',
-      category: "pizza",
-      prices: {
-        Cheese: 13,
-        "1-14 Toppings": 16,
-      },
-      options: {
-        Extras: 1.5,
-      },
-      slug: "medium-pizza",
-    },
-    {
-      title: 'Large 15"',
-      category: "pizza",
-      prices: {
-        Cheese: 16,
-        "1-14 Toppings": 20.0,
-      },
-      options: {
-        Extras: 2,
-      },
-      slug: "large-pizza",
-    },
+
+    // {
+    //   title: 'Small 9"',
+    //   category: "pizza",
+    //   prices: {
+    //     Cheese: 7,
+    //     "1-14 Toppings": 9,
+    //   },
+    //   options: {
+    //     Extras: 1,
+    //   },
+    //   slug: "small-pizza",
+    // },
+    // {
+    //   title: 'Medium 13"',
+    //   category: "pizza",
+    //   prices: {
+    //     Cheese: 13,
+    //     "1-14 Toppings": 16,
+    //   },
+    //   options: {
+    //     Extras: 1.5,
+    //   },
+    //   slug: "medium-pizza",
+    // },
+    // {
+    //   title: 'Large 15"',
+    //   category: "pizza",
+    //   prices: {
+    //     Cheese: 16,
+    //     "1-14 Toppings": 20.0,
+    //   },
+    //   options: {
+    //     Extras: 2,
+    //   },
+    //   slug: "large-pizza",
+    // },
   ],
   categories: [
     {
