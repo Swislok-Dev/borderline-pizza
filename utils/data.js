@@ -80,6 +80,8 @@ const data = {
         large: 9,
       },
       options: {},
+      description:
+        "Chips covered with our taco meat, refried beans, nacho cheese, tomatoes and black olives. Includes your choice of one side (sour cream, hot salsa, mild salsa, jalapenos or onions)",
       slug: "super-nachos",
     },
     {
@@ -90,6 +92,8 @@ const data = {
         large: 10,
       },
       options: {},
+      description:
+        "Same as Super Nacho plus lettuce, jalapenos, onlions and two sides instead of one.",
       slug: "super-duper-nachos",
     },
 
@@ -104,6 +108,8 @@ const data = {
       options: {
         "Add Chicken": 6,
       },
+      description:
+        "Lettuce topped with tomatoes, black olives, cheddar cheese, croutons and your choice of Ranch or French Dressing.",
       slug: "garden-salad",
     },
     {
@@ -114,6 +120,8 @@ const data = {
         large: 9,
       },
       options: {},
+      description:
+        "Lettuce on our taco meat, cheddar cheese, tomatoes, black olives and seasoned chips. Includes your choice of one side of sour cream, hot salsa, mild salsa, jalapenos, or onions).",
       slug: "taco-salad",
     },
 
@@ -126,6 +134,8 @@ const data = {
         "Beef, Chicken or BBQ": 1.75,
       },
       options: {},
+      description:
+        "A crisp corn tortilla loaded with meat, lettuce, tomato and cheddar cheese.",
       slug: "hard-taco",
     },
     {
@@ -135,6 +145,8 @@ const data = {
         "Beef, Chicken or BBQ": 1.75,
       },
       options: {},
+      description:
+        "A mini soft flour tortilla with meat, lettuce, tomato and cheddar cheese.",
       slug: "baby-soft-taco",
     },
     {
@@ -145,6 +157,8 @@ const data = {
         "Chicken, Chicken Ranch or BBQ": 4,
       },
       options: {},
+      description:
+        "A soft flour tortilla with meat, lettuce, tomato, and cheddar cheese.",
       slug: "soft-taco",
     },
     {
@@ -155,6 +169,8 @@ const data = {
         "Chicken, Chicken Ranch or BBQ": 5,
       },
       options: {},
+      description:
+        "Our big soft taco with onions, black olives, jalapenos and sour cream inside.",
       slug: "super-taco",
     },
     {
@@ -165,6 +181,8 @@ const data = {
         "Chicken, Chicken Ranch or BBQ": 8,
       },
       options: {},
+      description:
+        "A Soft Taco served with refried beans and seasoned chips. Includes your choice of one side (sour cream, hot salsa, mild salsa, jalapenos or onions).",
       slug: "soft-taco-dinner",
     },
 
@@ -177,6 +195,7 @@ const data = {
         "Beef, Bean, Chickon or BBQ": 1.75,
       },
       options: {},
+      description: "A mini soft flour tortilla with meat and cheddar cheese.",
       slug: "baby-burrito",
     },
     {
@@ -187,6 +206,8 @@ const data = {
         "Chicken, Chicken Ranch or BBQ": 4,
       },
       options: {},
+      description:
+        "A soft flour tortilla with meat and loaded with cheddar cheese.",
       slug: "burrito",
     },
     {
@@ -197,6 +218,8 @@ const data = {
         "Chicken, Chicken Ranch or BBQ": 6,
       },
       options: {},
+      description:
+        "A soft flour tortilla with extra meat and loaded with extra cheddar cheese.",
       slug: "super-burrito",
     },
     {
@@ -207,6 +230,8 @@ const data = {
         "Chicken, Chicken Ranch or BBQ": 8,
       },
       options: {},
+      description:
+        "A Burrite served with a small garden salad and seasoned chips. Includes your choice of one side(sour cream, hot salsa, mild salsa, jalapenos or onions).",
       slug: "burrito-dinner",
     },
 
@@ -219,6 +244,7 @@ const data = {
         "Beef or Chicken": 5,
       },
       options: {},
+      description: "Served on a bed of lettuce and covered in cheddar cheese.",
       slug: "enchilada",
     },
     {
@@ -228,6 +254,8 @@ const data = {
         "Beef or Chicken": 6,
       },
       options: {},
+      description:
+        "Served on a bed of lettuce, covered with cheddar cheese, tomatoes, black olives, jalapenos and onlins. Includes your choice of one side (sour cream, hot salsa or mild salsa).",
       slug: "super-enchilada",
     },
     {
@@ -237,6 +265,8 @@ const data = {
         "Beef or Chicken": 8,
       },
       options: {},
+      description:
+        "An Enchilada covered with cheddar cheese and served with a small garden salad and seasoned chips. Includes your choice of one side (sour cream, hot salsa, mild salsa, jalapenos or onions).",
       slug: "enchilada-dinner",
     },
 
@@ -291,6 +321,20 @@ const data = {
         Extras: 2,
       },
       slug: "large-pizza",
+    },
+  ],
+  categories: [
+    {
+      title: "Pizza",
+      description: "Thin or Pan crust available",
+    },
+    {
+      title: "Appetizers",
+      description: "One cup of Ranch, Pizza, or Nacho Cheese sauce included",
+    },
+    {
+      title: "Specialty Pizza",
+      description: "Thin or Pan crust available",
     },
   ],
 };
