@@ -193,6 +193,10 @@ footer {
   clip-path: polygon(20% 50%, 0% 100%, 0% 0%);
 }
 
+.menu-item > p {
+  font-size: 1.25rem;
+}
+
 .additional-fields {
   border-top: 1px solid rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
