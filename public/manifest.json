@@ -5,10 +5,15 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "/favicon/favicon.png",
+      "src": "/favicon/favicon.svg",
       "type": "image/svg+xml",
       "sizes": "any",
       "purpose": "any"
+    },
+    {
+      "src": "/favicon/favicon.png",
+      "type": "image",
+      "sizes": "any"
     }
   ]
 }
