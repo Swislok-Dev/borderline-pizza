@@ -37,9 +37,9 @@ export const splitPrices = ({ key, value }) => {
 const showOptionFields = (currentValue) => {
   return (
     <div key={currentValue} id="options" className="flex justify-between">
-      <h4 className="text-left italic">{currentValue[0]}</h4>
+      <h4 className="pl-4 italic">{currentValue[0]}</h4>
 
-      <p className="text-right ">
+      <p className="">
         {typeof currentValue[1] === "number"
           ? "$" + currentValue[1].toFixed(2)
           : currentValue[1]}
@@ -132,7 +132,6 @@ export const showCategoryDescription = ({ category }) => {
               </div>
             </section>
 
-            <p className="m-2">Thin or pan style crust available</p>
             <p className="m-2">
               *These toppings are not included automatically but are available
               by request at no additional charge.

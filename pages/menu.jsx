@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import ProductItem from "../components/ProductItem";
 import clientPromise from "../lib/mongodb.ts";
 
-function MenuScreen({ products }) {
+function MenuScreen({ products, categories }) {
   const productCategories = [
     "Specialty Pizza",
     "Pizza",
@@ -18,10 +18,18 @@ function MenuScreen({ products }) {
   return (
     <Layout title="Menu">
       <div key="menu">
-        {productCategories.map((step, index) => (
+        {productCategories.map((step) => (
           <section key={step}>
             <h2 className="category-heading">{step}</h2>
-            <article key={step[index]}>
+            <article>
+              {Object.entries(categories).map((item) =>
+                step == item[1].title ? (
+                  <p className="category-description" key={item[1].title}>
+                    {item[1].description}
+                  </p>
+                ) : null
+              )}
+
               {products.map((product) =>
                 product.category === step.toLowerCase() ? (
                   <ProductItem
@@ -43,10 +51,12 @@ export default MenuScreen;
 export async function getStaticProps() {
   const client = await clientPromise;
   const db = client.db("borderline-pizza");
-
   const products = await db.collection("products").find({}).toArray();
-
+  const categories = await db.collection("categories").find({}).toArray();
   return {
-    props: { products: JSON.parse(JSON.stringify(products)) },
+    props: {
+      products: JSON.parse(JSON.stringify(products)),
+      categories: JSON.parse(JSON.stringify(categories)),
+    },
   };
 }
