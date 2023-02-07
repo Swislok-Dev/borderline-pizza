@@ -25,7 +25,7 @@ export default function Layout({ title, children }) {
         <link rel="manifest" href="/manifest.json" />
         <style>
           @import
-          url(https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro:wght@400;600;700&display=swap);
+          url(https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro:wght@400;500;600;700&display=swap);
         </style>
       </Head>
 
