@@ -8,9 +8,9 @@ export const isObject = function (val) {
 export function menuItem(props) {
   const { title } = props;
   return (
-    <h3 key={title} className="text-left text-xl font-semibold">
+    <h4 key={title} className="text-left font-semibold">
       {title}
-    </h3>
+    </h4>
   );
 }
 
@@ -28,8 +28,19 @@ export const showMenuItem = ({ prices, title }) => {
 export const splitPrices = ({ key, value }) => {
   return (
     <div key={key} className="flex justify-between">
-      <h4 className=" text-left">{key[0].toUpperCase() + key.slice(1)}</h4>
-      <p className=" text-right text-xl font-bold">{"$" + value.toFixed(2)}</p>
+      {key == "Extras" ? (
+        <>
+          <h4 className="pl-4 italic">{key[0].toUpperCase() + key.slice(1)}</h4>
+          <p className="text-right text-lg">{"$" + value.toFixed(2)}</p>
+        </>
+      ) : (
+        <>
+          <h4 className=" text-left">{key[0].toUpperCase() + key.slice(1)}</h4>
+          <p className=" text-right text-xl font-bold">
+            {"$" + value.toFixed(2)}
+          </p>
+        </>
+      )}
     </div>
   );
 };
