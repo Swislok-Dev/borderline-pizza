@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --card-bg: rgb(147 197 253);
+  --bg-color: rgb(255 255 255);
+}
+
 html,
 body {
   padding: 0;
@@ -131,18 +136,7 @@ footer {
   align-items: center;
 }
 
-.show-more-button-container {
-  display: flex;
-  justify-content: center;
-}
 
-.show-more-button {
-  position: absolute;
-  font-size: 30px;
-  bottom: -40px;
-  padding: 10px 40px;
-  opacity: 0.5;
-}
 
 .back-button {
   visibility: visible;
@@ -170,31 +164,33 @@ footer {
 }
 
 .menu-item {
-  display: flex;
+  padding: 0.5rem;
+  background-color: var(--card-bg);
+  display: block;
   justify-content: center;
   position: relative;
   box-sizing: content-box;
   margin: 0 auto 60px auto;
   box-shadow: 0 2px 4px 0 rgb(0 0 0 / 0.5);
+  border-radius: 0.375rem;
 
-  @apply max-w-screen-lg rounded-md bg-blue-300 p-2;
 }
 
-.menu-item::before {
-  content: "";
+.show-more-button-container {
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.show-more-button {
   position: absolute;
-  box-shadow: inset 10px 10px 10px -10px black;
-  background-color: inherit;
-  display: block;
-  height: 150px;
-  width: 150px;
-  bottom: -150px;
-  transform: rotate(90deg);
-  clip-path: polygon(20% 50%, 0% 100%, 0% 0%);
+  font-size: 30px;
+  padding: 10px 40px;
+  transition: transform 0.5s 0s ease;
 }
 
-.menu-item > p {
-  font-size: 1.25rem;
+.show-more-button.true {
+  transform:  rotateX(180deg);
 }
 
 .additional-fields {
