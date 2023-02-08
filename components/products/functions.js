@@ -153,15 +153,8 @@ export const showCategoryDescription = ({ category }) => {
             </p>
           </>
         );
-      case "appetizers":
-        return (
-          <p className="m-2 border-t border-black">
-            One cup of Pizza or Nacho Cheese Sauce included
-          </p>
-        );
-      case "beverages":
-        console.log(category);
-        return;
+     
+     
       case "specialty pizza":
         return (
           <div className="m-2">
