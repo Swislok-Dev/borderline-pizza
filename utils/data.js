@@ -303,42 +303,6 @@ const data = {
       slug: "pizzas",
     },
 
-    // {
-    //   title: 'Small 9"',
-    //   category: "pizza",
-    //   prices: {
-    //     Cheese: 7,
-    //     "1-14 Toppings": 9,
-    //   },
-    //   options: {
-    //     Extras: 1,
-    //   },
-    //   slug: "small-pizza",
-    // },
-    // {
-    //   title: 'Medium 13"',
-    //   category: "pizza",
-    //   prices: {
-    //     Cheese: 13,
-    //     "1-14 Toppings": 16,
-    //   },
-    //   options: {
-    //     Extras: 1.5,
-    //   },
-    //   slug: "medium-pizza",
-    // },
-    // {
-    //   title: 'Large 15"',
-    //   category: "pizza",
-    //   prices: {
-    //     Cheese: 16,
-    //     "1-14 Toppings": 20.0,
-    //   },
-    //   options: {
-    //     Extras: 2,
-    //   },
-    //   slug: "large-pizza",
-    // },
   ],
   categories: [
     {
@@ -353,65 +317,8 @@ const data = {
       title: "Specialty Pizza",
       description: "Thin or Pan crust available",
     },
-    {
-      title: "Salads",
-      description: "This is a generic description for salads",
-    },
   ],
 };
 
-export const categories = [
-  {
-    title: "Pizza",
-    description: _descriptions[1].descriptions.description1,
-  },
-  {
-    title: "Appetizers",
-    description: "One cup of Ranch, Pizza, or Nacho Cheese sauce included",
-  },
-  {
-    title: "Specialty Pizza",
-    description: "Thin or Pan crust available",
-  },
-];
-
-export const itemDescription = [
-  "specialty pizza",
-  "pizza",
-  "pizza-toppings",
-  "appetizers",
-  "nachos",
-  "salads",
-  "tacos",
-  "burritos",
-  "enchiladas",
-];
-
-// export const specialtyPizzas = [
-//   "BBQ",
-//   "5 Meat*",
-//   "Beef Taco",
-//   "Chicken Taco",
-//   "Chicken Fajita**",
-//   "Triple Pepperoni",
-//   "Borderline 9",
-//   "The Everything",
-// ];
-
-// export const pizzaToppings = [
-//   "Canadian Bacon",
-//   "Pepperoni",
-//   "Hamburger",
-//   "Sausage",
-//   "Jalapeno*",
-//   "Diced Tomato*",
-//   "Green Olives",
-//   "Black Olives",
-//   "Onion",
-//   "Mixed Peppers",
-//   "Mushroom",
-//   "Pineapple",
-//   "Sauerkraut",
-// ]
 
 export default data;
