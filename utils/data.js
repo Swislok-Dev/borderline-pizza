@@ -2,10 +2,16 @@
 // category: '',
 // prices: ,
 // slug: "some-product-name",
+// import menuItems as description from "./productDescriptions.js"
+import menuItems, {
+  pizzaToppings,
+  specialtyPizzas,
+} from "./productDescriptions";
 
+const { _descriptions } = menuItems;
 const data = {
   products: [
-    // // appetizers
+    // appetizers
 
     {
       title: "Bread Sticks",
@@ -28,9 +34,8 @@ const data = {
     {
       title: "Bacon Cheddar Cheese Sticks",
       category: "appetizers",
-      prices: {
-        standard: 9,
-      },
+      prices: { standard: 9 },
+
       options: {
         "Extra Sauce": 1,
       },
@@ -93,7 +98,7 @@ const data = {
       },
       options: {},
       description:
-        "Same as Super Nacho plus lettuce, jalapenos, onlions and two sides instead of one.",
+        "Same as Super Nacho plus lettuce, jalapenos, onions and two sides instead of one.",
       slug: "super-duper-nachos",
     },
 
@@ -106,7 +111,7 @@ const data = {
         "Ranch or French Dressing": 4,
       },
       options: {
-        "Add Chicken": 6,
+        "Add Chicken": 2,
       },
       description:
         "Lettuce topped with tomatoes, black olives, cheddar cheese, croutons and your choice of Ranch or French Dressing.",
@@ -231,7 +236,7 @@ const data = {
       },
       options: {},
       description:
-        "A Burrite served with a small garden salad and seasoned chips. Includes your choice of one side(sour cream, hot salsa, mild salsa, jalapenos or onions).",
+        "A Burrito served with a small garden salad and seasoned chips. Includes your choice of one side(sour cream, hot salsa, mild salsa, jalapenos or onions).",
       slug: "burrito-dinner",
     },
 
@@ -255,7 +260,7 @@ const data = {
       },
       options: {},
       description:
-        "Served on a bed of lettuce, covered with cheddar cheese, tomatoes, black olives, jalapenos and onlins. Includes your choice of one side (sour cream, hot salsa or mild salsa).",
+        "Served on a bed of lettuce, covered with cheddar cheese, tomatoes, black olives, jalapenos and onions. Includes your choice of one side (sour cream, hot salsa or mild salsa).",
       slug: "super-enchilada",
     },
     {
@@ -279,8 +284,12 @@ const data = {
         'Medium 13"': 19,
         'Large 15"': 23,
       },
-      options: {},
-      selection: {},
+      description: {
+        _heading: "Available Choices",
+        _toppings: specialtyPizzas,
+        _1: "*includes canadian bacon, pepperoni, hamburger, sausage, and bacon",
+        _2: "**includes onion and green pepper",
+      },
       slug: "specialty-pizza",
     },
 
@@ -308,6 +317,13 @@ const data = {
         },
       },
       options: {},
+
+      description: {
+        _heading: "Available Toppings",
+        _toppings: pizzaToppings,
+        _1: "*These toppings are not included automatically, but are available by request at no additional charge.",
+        _2: 'Like Supreme Pizza? Try our "Borderline 9"',
+      },
       slug: "pizzas",
     },
 
@@ -351,7 +367,7 @@ const data = {
   categories: [
     {
       title: "Pizza",
-      description: "Thin or Pan crust available",
+      description: "This or Pan crust available",
     },
     {
       title: "Appetizers",
@@ -361,7 +377,69 @@ const data = {
       title: "Specialty Pizza",
       description: "Thin or Pan crust available",
     },
+    {
+      title: "Salads",
+      description: "This is a generic description for salads",
+    },
   ],
 };
+
+export const categories = [
+  {
+    title: "Pizza",
+    description: _descriptions[1].descriptions.description1,
+  },
+  {
+    title: "Appetizers",
+    description: "One cup of Ranch, Pizza, or Nacho Cheese sauce included",
+  },
+  {
+    title: "Specialty Pizza",
+    description: "Thin or Pan crust available",
+  },
+  {
+    title: "Salads",
+    description: "This is a generic description for salads",
+  },
+];
+
+export const itemDescription = [
+  "specialty pizza",
+  "pizza",
+  "pizza-toppings",
+  "appetizers",
+  "nachos",
+  "salads",
+  "tacos",
+  "burritos",
+  "enchiladas",
+];
+
+// export const specialtyPizzas = [
+//   "BBQ",
+//   "5 Meat*",
+//   "Beef Taco",
+//   "Chicken Taco",
+//   "Chicken Fajita**",
+//   "Triple Pepperoni",
+//   "Borderline 9",
+//   "The Everything",
+// ];
+
+// export const pizzaToppings = [
+//   "Canadian Bacon",
+//   "Pepperoni",
+//   "Hamburger",
+//   "Sausage",
+//   "Jalapeno*",
+//   "Diced Tomato*",
+//   "Green Olives",
+//   "Black Olives",
+//   "Onion",
+//   "Mixed Peppers",
+//   "Mushroom",
+//   "Pineapple",
+//   "Sauerkraut",
+// ]
 
 export default data;
