@@ -367,7 +367,7 @@ const data = {
   categories: [
     {
       title: "Pizza",
-      description: "This or Pan crust available",
+      description: "Thin or Pan crust available",
     },
     {
       title: "Appetizers",
