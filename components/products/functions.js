@@ -1,3 +1,5 @@
+import { itemDescription } from "../../utils/data";
+
 export const isObject = function (val) {
   if (val === null) {
     return false;
@@ -47,10 +49,10 @@ export const splitPrices = ({ key, value }) => {
 
 const showOptionFields = (currentValue) => {
   return (
-    <div key={currentValue} id="options" className="flex justify-between">
+    <div key={currentValue}  className="flex justify-between">
       <h4 className="pl-4 italic">{currentValue[0]}</h4>
 
-      <p className="">
+      <p>
         {typeof currentValue[1] === "number"
           ? "$" + currentValue[1].toFixed(2)
           : currentValue[1]}
@@ -59,17 +61,16 @@ const showOptionFields = (currentValue) => {
   );
 };
 
-export const showOptions = ({ options }) => {
-  if (options == undefined || !options) {
+export const showOptions = (options) => {
+  if (options == undefined) {
     return;
   }
-  return (
-    <div key={options}>
-      {Object.entries(options).map((currentValue) => {
-        return showOptionFields(currentValue);
-      })}
-    </div>
-  );
+
+  {
+    return Object.entries(options).map((currentValue) => {
+      return showOptionFields(currentValue);
+    });
+  }
 };
 
 export const showSelection = ({ selection }) => {
@@ -85,44 +86,39 @@ export const showSelection = ({ selection }) => {
   );
 };
 
-const itemDescription = [
-  "specialty pizza",
-  "pizza",
-  "pizza-toppings",
-  "appetizers",
-  "nachos",
-  "salads",
-  "tacos",
-  "burritos",
-  "enchiladas",
-];
-
-const pizzaToppings = [
-  "Canadian Bacon",
-  "Pepperoni",
-  "Hamburger",
-  "Sausage",
-  "Jalapeno*",
-  "Diced Tomato*",
-  "Green Olives",
-  "Black Olives",
-  "Onion",
-  "Mixed Peppers",
-  "Mushroom",
-  "Pineapple",
-  "Sauerkraut",
-];
-
-const specialtyPizzas = [
-  "BBQ",
-  "5 Meat*",
-  "Beef Taco",
-  "Chicken Taco",
-  "Chicken Fajita**",
-  "Triple Pepperoni",
-  "Borderline 9",
-  "The Everything",
-];
+export const showItemDescription = (category, description) => {
+  if (description && isObject(description)) {
+    return (
+      <>
+        <section className="additional-fields">
+          <h3 className="additional-fields-heading">{description._heading}</h3>
+          <div className="description-list ">
+            {description._toppings.map((el) => {
+              return (
+                <p className="font-semibold" key={el}>
+                  {el}
+                </p>
+              );
+            })}
+            
+          </div>
+        </section>
+        <aside className="descriptions">
+          <p>{description._1}</p>
+          <p>{description._2}</p>
+        </aside>
+      </>
+    );
+  } else {
+    return (
+      <section className="additional-fields">
+        <aside className="descriptions">
+          <p>{description}</p>
+        </aside>
+      </section>
+    );
+  }
+};
 
 export const showCategoryDescription = ({ category }) => {
   if (itemDescription.includes(category)) {
@@ -133,13 +129,13 @@ export const showCategoryDescription = ({ category }) => {
             <section className="additional-fields">
               <h3 className="additional-fields-heading">Available Toppings</h3>
               <div className="grid grid-cols-2">
-                {pizzaToppings.map((el) => {
+                {/* {pizzaToppings.map((el) => {
                   return (
                     <p className="font-semibold" key={el}>
                       {el}
                     </p>
                   );
-                })}
+                })} */}
               </div>
             </section>
 
@@ -153,8 +149,7 @@ export const showCategoryDescription = ({ category }) => {
             </p>
           </>
         );
-     
-     
+
       case "specialty pizza":
         return (
           <div className="m-2">
@@ -162,13 +157,13 @@ export const showCategoryDescription = ({ category }) => {
               <h3 className="additional-fields-heading">Available Choices</h3>
 
               <div className="grid grid-cols-2">
-                {specialtyPizzas.map((el) => {
+                {/* {specialtyPizzas.map((el) => {
                   return (
                     <p className="font-semibold" key={el}>
                       {el}
                     </p>
                   );
-                })}
+                })} */}
               </div>
             </section>
 
@@ -193,6 +188,3 @@ export const showCategoryDescription = ({ category }) => {
   }
 };
 
-export const showPizzaToppings = (props) => {
-  console.log(props);
-};

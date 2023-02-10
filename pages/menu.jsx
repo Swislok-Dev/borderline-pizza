@@ -19,7 +19,7 @@ function MenuScreen({ products, categories }) {
     <Layout title="Menu">
       <div key="menu">
         {productCategories.map((step) => (
-          <section key={step}>
+          <section className="category-container" key={step}>
             <h2 className="category-heading">{step}</h2>
             <article>
               {Object.entries(categories).map((item) =>

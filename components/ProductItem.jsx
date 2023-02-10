@@ -5,12 +5,13 @@ import {
   menuItem,
   showOptions,
   showMenuItem,
-  showCategoryDescription,
+  showItemDescription,
 } from "./products/functions";
 import { BsChevronDown } from "react-icons/bs";
 
 export default function ProductItem({ product }) {
-  const { title, category, prices, options, selection, slug } = product;
+  const { title, category, description, prices, options, selection, slug } =
+    product;
   const [isMoreShown, setIsMoreShown] = React.useState(false);
 
   const showMore = () => {
@@ -26,7 +27,7 @@ export default function ProductItem({ product }) {
         } else if (isObject(prices[val])) {
           result.push(
             <div key={val}>
-              <h4 className="text-left font-semibold text-xl text-gray-700">
+              <h4 className="text-left text-xl font-semibold text-gray-700">
                 {val[0].toUpperCase() + val.slice(1)}
               </h4>
               {show(prices[val])}
@@ -41,31 +42,21 @@ export default function ProductItem({ product }) {
     };
 
     const showAdditionalFields = ({ category }) => {
-      return (
-        <>
-          {showCategoryDescription({ category })}
-        </>
-      );
+      return <>{showItemDescription(category, description)}</>;
     };
 
     return (
       <div
         key={menuItem({ title }) && prices}
-        className="flex flex-auto flex-col justify-between"
+        className="flex  flex-col justify-between"
       >
         {prices.standard
-          ? showMenuItem({ prices, title })
+          ? showMenuItem({ prices, title, options })
           : menuItem({ title })}
         {show(prices)}
         {isMoreShown ? (
           <div>{showAdditionalFields({ category, selection })}</div>
         ) : null}
-
-        <div className="show-more-button-container">
-          <button onClick={showMore}  aria-label="show-more" className="show-more-button">
-            <BsChevronDown />
-          </button>
-        </div>
       </div>
     );
   };
@@ -75,6 +66,17 @@ export default function ProductItem({ product }) {
       <div key={slug} className="menu-item">
         {showFields({ prices, title, options, slug })}
       </div>
+      {description !== undefined ? (
+        <div className="show-more-button-container">
+          <button
+            onClick={showMore}
+            aria-label="show-more"
+            className={`show-more-button ${isMoreShown}`}
+          >
+            <BsChevronDown />
+          </button>
+        </div>
+      ) : null}
     </>
   );
 }
