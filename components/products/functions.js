@@ -21,7 +21,7 @@ export const showMenuItem = ({ prices, title }) => {
     <div className="flex justify-between">
       {menuItem({ title })}
       <p className="text-right text-xl font-bold">
-        {`$${prices.standard.toFixed(2)}`}
+        {`$${prices.toFixed(2)}`}
       </p>
     </div>
   );

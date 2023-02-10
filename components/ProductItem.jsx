@@ -50,7 +50,7 @@ export default function ProductItem({ product }) {
         key={menuItem({ title }) && prices}
         className="flex  flex-col justify-between"
       >
-        {prices.standard
+        {!isObject(prices)
           ? showMenuItem({ prices, title, options })
           : menuItem({ title })}
         {show(prices)}
