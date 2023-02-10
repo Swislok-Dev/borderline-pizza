@@ -373,10 +373,6 @@ export const categories = [
     title: "Specialty Pizza",
     description: "Thin or Pan crust available",
   },
-  {
-    title: "Salads",
-    description: "This is a generic description for salads",
-  },
 ];
 
 export const itemDescription = [
