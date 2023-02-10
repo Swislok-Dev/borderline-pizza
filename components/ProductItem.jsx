@@ -37,7 +37,7 @@ export default function ProductItem({ product }) {
           result.push(splitPrices({ key: val, value: prices[val] }));
         }
       }
-      result.push(showOptions({ options }));
+      result.push(showOptions(options));
       return result;
     };
 
