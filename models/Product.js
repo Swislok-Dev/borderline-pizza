@@ -3,11 +3,15 @@ import { mongoose } from "mongoose";
 const productSchema = new mongoose.Schema(
   {
     title: { type: String, required: false },
-    prices: { type: Object, required: false },
+    prices: { type: Object || String, required: false },
     slug: { type: String, required: true, unique: true },
     category: { type: String, required: true },
-    options: { type: Object, required: false },
-    description: { type: String, required: false },
+    options: { type: Object || String, required: false },
+    description: {
+      type: Object || String,
+      required: false,
+      _toppings: { type: Object, required: false },
+    },
     selection: { type: Object, required: false },
   },
   {
