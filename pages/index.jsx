@@ -5,6 +5,9 @@ export default function Home() {
     <Layout>
       <div id="hero">
         <h1>Borderline Pizza & Taco Jerry&apos;s</h1>
+        <a href="tel:6415853151">
+          <h2 id="phone-number">641-585-3151</h2>
+        </a>
         <section id="store-info">
           <h3>&quot;Best Pizza Anywhere&quot;</h3>
           <div id="store-hours">

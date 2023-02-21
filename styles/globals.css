@@ -75,6 +75,11 @@ nav {
   font-weight: 700;
 }
 
+#phone-number {
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
 main {
   margin: auto 1rem;
   padding: 0 1rem;
