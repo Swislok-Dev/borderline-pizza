@@ -31,10 +31,10 @@ function LoginScreen() {
             id="email"
             autoFocus
           />
+        </div>
           {errors.email && (
             <div className="text-red-500">{errors.email.message}</div>
           )}
-        </div>
         <div className="form-inputs">
           <label htmlFor="password">Password</label>
           <input type="password"
@@ -45,10 +45,11 @@ function LoginScreen() {
           id="password"
           autoFocus
            />
+           
+        </div>
            {errors.password && (
             <div className="text-red-500">{errors.password.message}</div>
            )}
-        </div>
         <div className="form-inputs">
           <button>Login</button>
         </div>
