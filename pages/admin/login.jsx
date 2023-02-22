@@ -2,12 +2,11 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Layout from "../../components/Layout";
 
-function login() {
+function LoginScreen() {
   const {
     handleSubmit,
     register,
     formState: { errors },
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   } = useForm();
 
   const submitHandler = ({ email, password }) => {
@@ -59,4 +58,4 @@ function login() {
   );
 }
 
-export default login;
+export default LoginScreen;
