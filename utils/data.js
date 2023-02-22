@@ -1,14 +1,5 @@
-// title: '',
-// category: '',
-// prices: ,
-// slug: "some-product-name",
-// import menuItems as description from "./productDescriptions.js"
-import menuItems, {
-  pizzaToppings,
-  specialtyPizzas,
-} from "./productDescriptions";
+import { pizzaToppings, specialtyPizzas } from "./productDescriptions";
 
-const { _descriptions } = menuItems;
 const data = {
   products: [
     // appetizers
@@ -302,7 +293,6 @@ const data = {
       },
       slug: "pizzas",
     },
-
   ],
   categories: [
     {
@@ -319,6 +309,5 @@ const data = {
     },
   ],
 };
-
 
 export default data;
