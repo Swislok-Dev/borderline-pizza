@@ -7,6 +7,7 @@ import { useSession } from "next-auth/react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { signOut } from "next-auth/react";
+import { toast } from "react-toastify";
 
 export default function Layout({ title, children }) {
   const { status, data: session } = useSession();
@@ -22,6 +23,7 @@ export default function Layout({ title, children }) {
 
   const logoutHandler = () => {
     signOut({ callbackUrl: "/admin/login" });
+    toast.success("Successfully Logged Out");
   };
 
   return (
@@ -62,22 +64,27 @@ export default function Layout({ title, children }) {
               <a>Menu</a>
             </Link>
           </nav>
-        </header>
 
-        <main>
-          {/* <aside id="admin-id">{session?.user.name}</aside> */}
           {session?.user ? (
             <aside id="admin-id">
-              <p>{`Currently logged in as ${session.user.isDev ? "Dev" : "Admin"} ${session.user.name}`}</p>
-              <button className="rounded bg-red-300 p-2" onClick={logoutHandler}>logout</button>
+              <p>{`Currently logged in as ${
+                session.user.isDev === "true" ? "Dev" : "Admin"
+              } ${session.user.name}`}</p>
+              <button
+                className="rounded bg-red-300 p-2"
+                onClick={logoutHandler}
+              >
+                logout
+              </button>
             </aside>
           ) : (
-            <aside  data-logged-out id="admin-id">
+            <aside data-logged-out id="admin-id">
               {status}
             </aside>
           )}
-          {children}
-        </main>
+        </header>
+
+        <main>{children}</main>
 
         <footer>
           <p>Copyright © 2022 Borderline Pizza</p>
