@@ -271,6 +271,11 @@ form button {
 }
 
 #admin-id {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aquamarine;
+  padding: 8px;
   color: red;
   font-weight: bold;
 }
