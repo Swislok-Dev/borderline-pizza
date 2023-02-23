@@ -3,8 +3,14 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { BsChevronLeft } from "react-icons/bs";
+import { useSession } from "next-auth/react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { signOut } from "next-auth/react";
 
 export default function Layout({ title, children }) {
+  const { status, data: session } = useSession();
+
   const [isBackButtonVisible, setIsBackButtonVisible] = useState("hidden");
   const router = useRouter();
 
@@ -13,6 +19,10 @@ export default function Layout({ title, children }) {
       setIsBackButtonVisible("visible");
     }
   }, [router]);
+
+  const logoutHandler = () => {
+    signOut({ callbackUrl: "/admin/login" });
+  };
 
   return (
     <>
@@ -28,6 +38,8 @@ export default function Layout({ title, children }) {
           url(https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro:wght@400;500;600;700&display=swap);
         </style>
       </Head>
+
+      <ToastContainer position="bottom-center" limit={2} />
 
       <div id="content">
         <header>
@@ -52,7 +64,20 @@ export default function Layout({ title, children }) {
           </nav>
         </header>
 
-        <main>{children}</main>
+        <main>
+          {/* <aside id="admin-id">{session?.user.name}</aside> */}
+          {session?.user ? (
+            <aside id="admin-id">
+              <p>{`Currently logged in as ${session.user.isDev ? "Dev" : "Admin"} ${session.user.name}`}</p>
+              <button className="rounded bg-red-300 p-2" onClick={logoutHandler}>logout</button>
+            </aside>
+          ) : (
+            <aside  data-logged-out id="admin-id">
+              {status}
+            </aside>
+          )}
+          {children}
+        </main>
 
         <footer>
           <p>Copyright © 2022 Borderline Pizza</p>
