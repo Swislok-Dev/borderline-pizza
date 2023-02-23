@@ -3,20 +3,20 @@ import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import { useSession, signIn } from "next-auth/react";
 import { getError } from "../../utils/error";
-import Layout from '../../components/Layout';
-import { toast } from 'react-toastify';
+import Layout from "../../components/Layout";
+import { toast } from "react-toastify";
 
 function LoginScreen() {
   const { data: session } = useSession();
   const router = useRouter();
   const { redirect } = router.query;
-  const callbackUrl = (router.query?.callbackUrl)
+  const callbackUrl = router.query?.callbackUrl;
 
   useEffect(() => {
     if (session?.user) {
-      router.push(redirect || "/");
+      router.push(redirect || callbackUrl || "/admin");
     }
-  }, [router, session, redirect]);
+  }, [router, session, redirect, callbackUrl]);
 
   const {
     handleSubmit,
@@ -30,16 +30,16 @@ function LoginScreen() {
         redirect: true,
         email,
         password,
-        callbackUrl: '/admin',
+        callbackUrl: "/admin",
       });
       if (result.error) {
-        toast.error(result.error)
-      }
-      else {
-        router.push(callbackUrl)
+        toast.error(result.error);
+      } else {
+        router.push(callbackUrl);
+        toast.success("Logged In")
       }
     } catch (err) {
-      console.error(getError(err));
+      toast.error(getError(err));
     }
   };
 
@@ -57,6 +57,7 @@ function LoginScreen() {
                 message: "Please enter email",
               },
             })}
+            autoComplete="off"
             type="email"
             id="email"
             autoFocus
@@ -72,8 +73,8 @@ function LoginScreen() {
             {...register("password", {
               required: "Please enter password",
               minLength: {
-                value: 6,
-                message: "password must be longer than 5 characters",
+                value: 5,
+                message: "password must be longer than 4 characters",
               },
             })}
             id="password"
