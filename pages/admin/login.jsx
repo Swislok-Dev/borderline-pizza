@@ -1,16 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 import { useSession, signIn } from "next-auth/react";
 import { getError } from "../../utils/error";
 import Layout from "../../components/Layout";
 import { toast } from "react-toastify";
+import PageLoading from "../../components/PageLoading";
 
 function LoginScreen() {
   const { data: session } = useSession();
   const router = useRouter();
   const { redirect } = router.query;
   const callbackUrl = router.query?.callbackUrl;
+
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (session?.user) {
@@ -26,6 +29,7 @@ function LoginScreen() {
 
   const submitHandler = async ({ email, password }, event) => {
     event.preventDefault();
+    setIsLoading(true);
     try {
       const result = await signIn("credentials", {
         redirect: false,
@@ -41,7 +45,12 @@ function LoginScreen() {
     } catch (err) {
       toast.error(getError(err));
     }
+    setIsLoading(false);
   };
+
+  if (isLoading) {
+    return <PageLoading />;
+  }
 
   return (
     <Layout title="Login">
