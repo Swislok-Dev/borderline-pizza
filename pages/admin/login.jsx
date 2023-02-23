@@ -14,9 +14,9 @@ function LoginScreen() {
 
   useEffect(() => {
     if (session?.user) {
-      router.push(redirect || callbackUrl || "/admin");
+      router.push(redirect || "/admin");
     }
-  }, [router, session, redirect, callbackUrl]);
+  }, [router, session, redirect]);
 
   const {
     handleSubmit,
@@ -24,19 +24,19 @@ function LoginScreen() {
     formState: { errors },
   } = useForm();
 
-  const submitHandler = async ({ email, password }) => {
+  const submitHandler = async ({ email, password }, event) => {
+    event.preventDefault();
     try {
       const result = await signIn("credentials", {
-        redirect: true,
+        redirect: false,
         email,
         password,
-        callbackUrl: "/admin",
       });
-      if (result.error) {
+      if (result?.error) {
         toast.error(result.error);
       } else {
+        toast.success("Logged In");
         router.push(callbackUrl);
-        toast.success("Logged In")
       }
     } catch (err) {
       toast.error(getError(err));
@@ -78,7 +78,6 @@ function LoginScreen() {
               },
             })}
             id="password"
-            autoFocus
           />
         </div>
         {errors.password && (

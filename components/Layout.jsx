@@ -21,9 +21,10 @@ export default function Layout({ title, children }) {
     }
   }, [router]);
 
-  const logoutHandler = () => {
-    signOut({ callbackUrl: "/admin/login" });
+  const logoutHandler = (event) => {
+    event.preventDefault();
     toast.success("Successfully Logged Out");
+    signOut({ callbackUrl: "/admin/login" });
   };
 
   return (
@@ -68,7 +69,7 @@ export default function Layout({ title, children }) {
           {session?.user ? (
             <aside id="admin-id">
               <p>{`Currently logged in as ${
-                session.user.isDev === "true" ? "Dev" : "Admin"
+                session?.user.isDev == true ? "Dev" : "Admin"
               } ${session.user.name}`}</p>
               <button
                 className="rounded bg-red-300 p-2"
