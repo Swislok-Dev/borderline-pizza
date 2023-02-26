@@ -273,6 +273,10 @@ form button {
   font-weight: bold;
 }
 
+#admin-id[data-logged-out] {
+  display: none;
+}
+
 #page-loading-container {
   position: fixed;
   top: 0;
