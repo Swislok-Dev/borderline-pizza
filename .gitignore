@@ -41,4 +41,5 @@ next-env.d.ts
 
 #general
 utils/users.js
+pages/api/seedUsers.js
 
