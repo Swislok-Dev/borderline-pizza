@@ -126,7 +126,7 @@ const data = {
       title: "Baby Soft Taco",
       category: "tacos",
       prices: {
-        "Beef, Chicken or BBQ": 1.75,
+        "Beef, Chicken or BBQ": 2,
       },
       description:
         "A mini soft flour tortilla with meat, lettuce, tomato and cheddar cheese.",
@@ -136,8 +136,7 @@ const data = {
       title: "Soft Taco",
       category: "tacos",
       prices: {
-        beef: 4,
-        "Chicken, Chicken Ranch or BBQ": 4,
+        "Beef, Chicken, Chicken Ranch or BBQ": 4,
       },
       description:
         "A soft flour tortilla with meat, lettuce, tomato, and cheddar cheese.",
@@ -147,8 +146,7 @@ const data = {
       title: "Super Taco",
       category: "tacos",
       prices: {
-        beef: 5,
-        "Chicken, Chicken Ranch or BBQ": 5,
+        "Beef, Chicken, Chicken Ranch or BBQ": 5,
       },
       description:
         "Our big soft taco with onions, black olives, jalapenos and sour cream inside.",
@@ -158,8 +156,7 @@ const data = {
       title: "Soft Taco Dinner",
       category: "tacos",
       prices: {
-        beef: 8,
-        "Chicken, Chicken Ranch or BBQ": 8,
+        "Beef, Chicken, Chicken Ranch or BBQ": 8,
       },
       description:
         "A Soft Taco served with refried beans and seasoned chips. Includes your choice of one side (sour cream, hot salsa, mild salsa, jalapenos or onions).",
@@ -172,7 +169,7 @@ const data = {
       title: "Baby Burrito",
       category: "burritos",
       prices: {
-        "Beef, Bean, Chickon or BBQ": 1.75,
+        "Beef, Bean, Chicken or BBQ": 2,
       },
       description: "A mini soft flour tortilla with meat and cheddar cheese.",
       slug: "baby-burrito",
@@ -181,8 +178,7 @@ const data = {
       title: "Burrito",
       category: "burritos",
       prices: {
-        "Beef, Bean, Beef & Bean": 4,
-        "Chicken, Chicken Ranch or BBQ": 4,
+        "Beef, Bean, Beef & Bean, Chicken, Chicken Ranch or BBQ": 4,
       },
       description:
         "A soft flour tortilla with meat and loaded with cheddar cheese.",
@@ -192,8 +188,7 @@ const data = {
       title: "Super Burrito",
       category: "burritos",
       prices: {
-        "Beef, Bean, Beef & Bean": 6,
-        "Chicken, Chicken Ranch or BBQ": 6,
+        "Beef, Bean, Beef & Bean, Chicken, Chicken Ranch or BBQ": 6,
       },
       description:
         "A soft flour tortilla with extra meat and loaded with extra cheddar cheese.",
@@ -203,8 +198,7 @@ const data = {
       title: "Burrito Dinner",
       category: "burritos",
       prices: {
-        "Beef, Bean, Beef & Bean": 8,
-        "Chicken, Chicken Ranch or BBQ": 8,
+        "Beef, Bean, Beef & Bean, Chicken, Chicken Ranch or BBQ": 8,
       },
       description:
         "A Burrito served with a small garden salad and seasoned chips. Includes your choice of one side(sour cream, hot salsa, mild salsa, jalapenos or onions).",
@@ -214,30 +208,24 @@ const data = {
     // enchiladas
 
     {
-      title: "Enchilada",
+      title: "Beef Enchilada",
       category: "enchiladas",
-      prices: {
-        "Beef or Chicken": 5,
-      },
+      prices: 5,
       description: "Served on a bed of lettuce and covered in cheddar cheese.",
       slug: "enchilada",
     },
     {
-      title: "Super Enchilada",
+      title: "Beef Super Enchilada",
       category: "enchiladas",
-      prices: {
-        "Beef or Chicken": 6,
-      },
+      prices: 6,
       description:
         "Served on a bed of lettuce, covered with cheddar cheese, tomatoes, black olives, jalapenos and onions. Includes your choice of one side (sour cream, hot salsa or mild salsa).",
       slug: "super-enchilada",
     },
     {
-      title: "Enchilada Dinner",
+      title: "Beef Enchilada Dinner",
       category: "enchiladas",
-      prices: {
-        "Beef or Chicken": 8,
-      },
+      prices: 8,
       description:
         "An Enchilada covered with cheddar cheese and served with a small garden salad and seasoned chips. Includes your choice of one side (sour cream, hot salsa, mild salsa, jalapenos or onions).",
       slug: "enchilada-dinner",
@@ -250,7 +238,7 @@ const data = {
       prices: {
         'Small 9"': 10,
         'Medium 13"': 19,
-        'Large 15"': 23,
+        'Large 15"': 25,
       },
       description: {
         _heading: "Available Choices",
@@ -275,13 +263,13 @@ const data = {
         'Medium 13"': {
           Cheese: 13,
           "1-14 Toppings": 16,
-          Extras: 1.5,
+          Extras: 2,
         },
 
         'Large 15"': {
           Cheese: 16,
           "1-14 Toppings": 20.0,
-          Extras: 2,
+          Extras: 3,
         },
       },
 
