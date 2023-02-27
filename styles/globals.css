@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --card-color: rgb(147 197 253);
   --bg-color: rgb(255 255 255);
+  --orange: #ff7d4a;
+  --purple: #997aff;
+  --cyan: #3effde;
+  --yellow: #ffee4d;
+  --blue: #93c5fd;
+
+  --card-color: var(--blue);
 }
 
 html,
@@ -75,6 +81,16 @@ nav {
   font-weight: 700;
 }
 
+#page-links > a {
+  padding-left: 8px;
+}
+
+#admin-links > * {
+  justify-content: center;
+  align-items: center;
+  gap: 2;
+}
+
 #phone-number {
   font-weight: 600;
   font-size: 1.75rem;
@@ -128,7 +144,11 @@ footer {
 }
 
 .category-container {
-  margin: 32px 0;
+  background-color: rgb(25 25 25 / 0.2);
+  margin: 42px 0;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px -5px black;
 }
 
 .category-heading {
