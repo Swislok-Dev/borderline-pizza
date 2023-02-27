@@ -71,12 +71,23 @@ export default function Layout({ title, children }) {
               <p>{`Currently logged in as ${
                 session?.user.isDev == true ? "Dev" : "Admin"
               } ${session.user.name}`}</p>
-              <button
-                className="rounded bg-red-300 p-2"
-                onClick={logoutHandler}
-              >
-                logout
-              </button>
+              <div id="admin-links" className="flex gap-2">
+                <button
+                  type="button"
+                  className="rounded bg-blue-400 p-2 text-white"
+                >
+                  <Link href="/admin">
+                    <a>Admin Panel</a>
+                  </Link>
+                </button>
+                <button
+                  type="button"
+                  className="rounded bg-red-300 p-2 text-white"
+                  onClick={logoutHandler}
+                >
+                  logout
+                </button>
+              </div>
             </aside>
           ) : (
             <aside data-logged-out id="admin-id">
