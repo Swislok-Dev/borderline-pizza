@@ -52,6 +52,7 @@ const menuItems = {
     {
       title: "Appetizers",
       description: "One cup of Ranch, Pizza, or Nacho Cheese sauce included",
+      _description2: "Extra Sauce $1.00"
     },
     {
       title: "Specialty Pizza",
