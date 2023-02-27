@@ -85,6 +85,59 @@ nav {
   padding-left: 8px;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(20 20 20 / 0.7);
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 60px;
+    gap: 0;
+    border-radius: 5px;
+    width: 60%;
+    transition: 0.3s;
+    text-align: center;
+    background-color: rgb(60 60 200 / 0.9);
+    color: white;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    right: 10px;
+  }
+}
+
 #admin-links > * {
   justify-content: center;
   align-items: center;

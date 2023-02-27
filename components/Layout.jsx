@@ -11,9 +11,14 @@ import { toast } from "react-toastify";
 
 export default function Layout({ title, children }) {
   const { status, data: session } = useSession();
+  const [isActive, setIsActive] = useState(false);
 
   const [isBackButtonVisible, setIsBackButtonVisible] = useState("hidden");
   const router = useRouter();
+
+  const hamburgerMenuExpand = () => [setIsActive(!isActive)];
+
+  const showHamburgerMenu = isActive ? "active" : null;
 
   useEffect(() => {
     if (router.pathname !== "/" && router.pathname !== "/menu") {
@@ -61,9 +66,21 @@ export default function Layout({ title, children }) {
               </a>
             </Link>
 
-            <Link href="/menu">
-              <a>Menu</a>
-            </Link>
+            <ul  className={`nav-menu ${showHamburgerMenu}`}>
+              <li  className="nav-item">
+                <Link href="/menu">
+                  <a onClick={() => setIsActive(false)}>Menu</a>
+                </Link>
+              </li>
+            </ul>
+            <div
+              onClick={hamburgerMenuExpand}
+              className={`hamburger ${showHamburgerMenu}`}
+            >
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
+            </div>
           </nav>
 
           {session?.user ? (
@@ -96,7 +113,7 @@ export default function Layout({ title, children }) {
           )}
         </header>
 
-        <main>{children}</main>
+        <main className={showHamburgerMenu} onClick={() => setIsActive(false)}>{children}</main>
 
         <footer>
           <p>Copyright © 2022 Borderline Pizza</p>
