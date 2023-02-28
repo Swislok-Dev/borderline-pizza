@@ -296,6 +296,20 @@ const data = {
       description: "Thin or Pan crust available",
     },
   ],
+  adminSettings: [
+    {
+      motd: "We are open...for now!",
+      hours: {
+        Monday: "11-9PM",
+        Tuesday: "11-9PM",
+        Wednesday: "11-9PM",
+        Thursday: "11-9PM",
+        Friday: "11-9PM",
+        Saturday: "11-9PM",
+        Sunday: "11-9PM",
+      },
+    },
+  ],
 };
 
 export default data;
