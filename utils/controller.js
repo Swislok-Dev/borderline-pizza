@@ -18,8 +18,8 @@ export async function getProducts(req, res) {
 // GET http://localhost:3000/api/products/?id
 export async function getProduct(req, res) {
   try {
-    const { id } = req.query;
-    const product = await Product.findById(id);
+    const { slug } = req.query;
+    const product = await Product.find({slug});
 
     console.log(product);
 
