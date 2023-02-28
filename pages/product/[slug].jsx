@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Layout from "../../components/Layout";
 import Link from "next/link";
 import clientPromise from "../../lib/mongodb";
-import { showCategoryDescription } from "../../components/products/functions";
+import ProductItem from "../../components/ProductItem";
 
 export default function ProductScreen({ products }) {
   const { query } = useRouter();
@@ -27,15 +27,13 @@ export default function ProductScreen({ products }) {
   }
 
   return (
-    <Layout title={product.title}>
+    <Layout title={`Editting ${product.title}`}>
       {backToMenuLink()}
 
-      <div className="flex flex-auto flex-col justify-between">
-        <div className="m-auto my-4 max-w-screen-lg rounded-md bg-blue-300 p-2 hover:bg-blue-600 hover:text-gray-200 active:text-red-300">
-          <h2>{product.title}</h2>
-        </div>
+      <div className="m-auto flex max-w-3xl flex-auto flex-col justify-between">
+        <div><ProductItem product={product} /></div>
+        <p>stuff</p>
       </div>
-      {showCategoryDescription({ category: product.category })}
     </Layout>
   );
 }
@@ -50,3 +48,5 @@ export async function getServerSideProps() {
     props: { products: JSON.parse(JSON.stringify(products)) },
   };
 }
+
+ProductScreen.auth = true;

@@ -8,11 +8,15 @@ import {
   showItemDescription,
 } from "./products/functions";
 import { BsChevronDown } from "react-icons/bs";
+import { useSession } from "next-auth/react";
+import EditProduct from "./EditProduct";
 
 export default function ProductItem({ product }) {
   const { title, category, description, prices, options, selection, slug } =
     product;
   const [isMoreShown, setIsMoreShown] = React.useState(false);
+
+  const { data: session } = useSession();
 
   const showMore = () => {
     setIsMoreShown(!isMoreShown);
@@ -50,6 +54,7 @@ export default function ProductItem({ product }) {
         key={menuItem({ title }) && prices}
         className="flex  flex-col justify-between"
       >
+        {session?.user.isAdmin ? <EditProduct slug={product.slug}/> : null}
         {!isObject(prices)
           ? showMenuItem({ prices, title, options })
           : menuItem({ title })}
