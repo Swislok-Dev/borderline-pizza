@@ -53,7 +53,7 @@ export default function ProductItem({ product }) {
 
     return (
       <div
-        key={menuItem({ title }) && prices}
+        key={{ title } && prices}
         className="flex  flex-col justify-between"
       >
         {session?.user.isAdmin && router.pathname == "/menu" ? <EditProduct slug={product.slug}/> : null}
