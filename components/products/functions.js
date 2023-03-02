@@ -7,21 +7,25 @@ export const isObject = function (val) {
   return typeof val === "object";
 };
 
-export function menuItem(props) {
+export function productTitle(props) {
   const { title } = props;
   return (
-    <h4 key={title} className="text-left font-semibold">
+    <h4 key={title} className="product-title">
       {title}
     </h4>
   );
 }
 
+function formatPrice(price) {
+  return <p className="price">{`$${price.toFixed(2)}`}</p>;
+}
+
 export const showMenuItem = ({ prices, title }) => {
   return (
     <div className="flex justify-between">
-      {menuItem({ title })}
+      {productTitle({ title })}
       <p className="text-right text-xl font-bold">
-        {`$${prices.toFixed(2)}`}
+        {formatPrice(prices)}
       </p>
     </div>
   );
@@ -49,7 +53,7 @@ export const splitPrices = ({ key, value }) => {
 
 const showOptionFields = (currentValue) => {
   return (
-    <div key={currentValue}  className="flex justify-between">
+    <div key={currentValue} className="flex justify-between">
       <h4 className="pl-4 italic">{currentValue[0]}</h4>
 
       <p>
@@ -100,7 +104,6 @@ export const showItemDescription = (category, description) => {
                 </p>
               );
             })}
-            
           </div>
         </section>
         <aside className="descriptions">
@@ -121,7 +124,7 @@ export const showItemDescription = (category, description) => {
 };
 
 export const showCategoryDescription = ({ category }) => {
-  console.log(category)
+  console.log(category);
   // if (itemDescription.includes(category)) {
   //   switch (category) {
   //     case "pizza":
@@ -188,4 +191,3 @@ export const showCategoryDescription = ({ category }) => {
   //   }
   // }
 };
-

@@ -253,6 +253,18 @@ footer {
   border-radius: 0.375rem;
 }
 
+.product-title {
+  font-weight: 600;
+  text-align: left;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: right;
+}
+
 .show-more-button-container {
   display: flex;
   justify-content: center;
