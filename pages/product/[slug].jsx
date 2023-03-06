@@ -32,7 +32,6 @@ export default function ProductScreen({ products }) {
 
       <div className="m-auto flex max-w-3xl flex-auto flex-col justify-between">
         <div><ProductItem product={product} /></div>
-        <p>stuff</p>
       </div>
     </Layout>
   );

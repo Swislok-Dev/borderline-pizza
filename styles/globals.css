@@ -256,6 +256,17 @@ footer {
 .product-title {
   font-weight: 600;
   text-align: left;
+  font-size: 1.25rem;
+}
+
+.extra-size {
+  font-style: italic;
+  padding-left: 1rem;
+}
+
+.extra-price {
+  font-size: 1.125rem;
+  font-weight: 400;
 }
 
 .price {
@@ -263,6 +274,10 @@ footer {
   font-size: 1.25rem;
   line-height: 1.75rem;
   text-align: right;
+}
+.options-price {
+  font-weight: 400;
+  font-size: 1.125rem;
 }
 
 .show-more-button-container {

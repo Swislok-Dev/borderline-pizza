@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  isObject,
-  splitPrices,
-  menuItem,
-  showOptions,
-  showMenuItem,
-  showItemDescription,
-} from "./products/functions";
+import { showMenuItem, showItemDescription } from "./products/functions";
 import { BsChevronDown } from "react-icons/bs";
 import { useSession } from "next-auth/react";
 import EditProduct from "./EditProduct";
@@ -24,43 +17,17 @@ export default function ProductItem({ product }) {
     setIsMoreShown(!isMoreShown);
   };
   const showFields = ({ prices, title, options }) => {
-    const show = (prices) => {
-      let result = [];
-
-      for (let val in prices) {
-        if (val === "standard") {
-          return;
-        } else if (isObject(prices[val])) {
-          result.push(
-            <div key={val}>
-              <h4 className="text-left text-xl font-semibold text-gray-700">
-                {val[0].toUpperCase() + val.slice(1)}
-              </h4>
-              {show(prices[val])}
-            </div>
-          );
-        } else {
-          result.push(splitPrices({ key: val, value: prices[val] }));
-        }
-      }
-      result.push(showOptions(options));
-      return result;
-    };
-
     const showAdditionalFields = ({ category }) => {
       return <>{showItemDescription(category, description)}</>;
     };
 
     return (
-      <div
-        key={{ title } && prices}
-        className="flex  flex-col justify-between"
-      >
-        {session?.user.isAdmin && router.pathname == "/menu" ? <EditProduct slug={product.slug}/> : null}
-        {!isObject(prices)
-          ? showMenuItem({ prices, title, options })
-          : menuItem({ title })}
-        {show(prices)}
+      <div key={{ title } && prices} className="flex  flex-col justify-between">
+        {session?.user.isAdmin && router.pathname == "/menu" ? (
+          <EditProduct slug={product.slug} />
+        ) : null}
+        {showMenuItem({ prices, title, options, category })}
+
         {isMoreShown ? (
           <div>{showAdditionalFields({ category, selection })}</div>
         ) : null}

@@ -16,19 +16,78 @@ export function productTitle(props) {
   );
 }
 
-function formatPrice(price) {
-  return <p className="price">{`$${price.toFixed(2)}`}</p>;
+function formatSize(size) {
+  function upperCase(size) {
+    return size[0].toUpperCase() + size.slice(1);
+  }
+  if (size.toLowerCase().includes("extra")) {
+    return <h4 className="menu-size-name extra-size">{upperCase(size)}</h4>;
+  }
+  return <h4 className="menu-size-name">{upperCase(size)}</h4>;
 }
 
-export const showMenuItem = ({ prices, title }) => {
-  return (
-    <div className="flex justify-between">
-      {productTitle({ title })}
-      <p className="text-right text-xl font-bold">
-        {formatPrice(prices)}
-      </p>
-    </div>
+function formatPrice(price, size = "") {
+  const extras = !size.toLowerCase().includes("extra")
+    ? "price"
+    : "extra-price";
+  return <p className={extras}>{`$${price.toFixed(2)}`}</p>;
+}
+
+export const showMenuItem = ({ prices, title, options, category }) => {
+  const isProductTitle = category == "specialty pizza" ? "product-title" : null;
+  let result = [];
+  result.push(
+    typeof prices == "number" ? (
+      <div className="flex justify-between">
+        {productTitle({ title })}
+        <p className="text-right text-xl font-bold">{formatPrice(prices)}</p>
+      </div>
+    ) : (
+      <div>
+        {productTitle({ title })}
+        {Object.entries(prices).map((value) => {
+          if (typeof value[1] == "number") {
+            return (
+              <div key={value} className="flex justify-between">
+                <p className={isProductTitle}>{formatSize(value[0])}</p>
+                <p>{formatPrice(value[1])}</p>
+              </div>
+            );
+          } else if (value[1].title) {
+            return (
+              <div
+                key={value[1].title}
+                className="flex flex-col justify-between"
+              >
+                <h4 className="product-title">{value[1].title}</h4>
+                {Object.entries(value[1]).map((el) => {
+                  if (el[0] != "title") {
+                    return (
+                      <div key={el} className="flex justify-between">
+                        <p>{formatSize(el[0])}</p>
+                        <p>{formatPrice(el[1], el[0])}</p>
+                      </div>
+                    );
+                  }
+                })}
+              </div>
+            );
+          } else {
+            return Object.entries(value[1]).map((el) => {
+              return (
+                <div key={el} className="flex justify-between">
+                  <p>{formatSize(el[0])}</p>
+                  <p>{formatPrice(el[1], el[0])}</p>
+                </div>
+              );
+            });
+          }
+        })}
+      </div>
+    )
   );
+  result.push(showOptions(options));
+  return result;
 };
 
 export const splitPrices = ({ key, value }) => {
@@ -56,7 +115,7 @@ const showOptionFields = (currentValue) => {
     <div key={currentValue} className="flex justify-between">
       <h4 className="pl-4 italic">{currentValue[0]}</h4>
 
-      <p>
+      <p className="options-price">
         {typeof currentValue[1] === "number"
           ? "$" + currentValue[1].toFixed(2)
           : currentValue[1]}
