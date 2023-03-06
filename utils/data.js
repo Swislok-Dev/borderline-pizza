@@ -1,4 +1,4 @@
-import { pizzaToppings, specialtyPizzas } from "./productDescriptions";
+import { pizzaToppings, specialtyPizzas } from "../utils/productDescriptions";
 
 const data = {
   products: [
@@ -233,7 +233,8 @@ const data = {
 
     // specialty-pizza
     {
-      title: "Specialty Pizzas",
+      title: "",
+      name: "Specialty Pizzas",
       category: "specialty pizza",
       prices: {
         'Small 9"': 10,
@@ -253,20 +254,24 @@ const data = {
 
     {
       title: "",
+      name: "Pizza",
       category: "pizza",
       prices: {
-        'Small 9"': {
+        small: {
+          title: 'Small 9"',
           Cheese: 7,
           "1-14 Toppings": 9,
           Extras: 1,
         },
-        'Medium 13"': {
+        medium: {
+          title: 'Medium 13"',
           Cheese: 13,
           "1-14 Toppings": 16,
           Extras: 2,
         },
 
-        'Large 15"': {
+        large: {
+          title: 'Large 15"',
           Cheese: 16,
           "1-14 Toppings": 20.0,
           Extras: 3,
