@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import { SessionProvider, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
+import { Analytics } from '@vercel/analytics/react';
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       ) : (
         <Component {...pageProps} />
       )}
+      <Analytics />
     </SessionProvider>
   );
 }
