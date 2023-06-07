@@ -32,6 +32,10 @@ export default function Layout({ title, children }) {
     signOut({ callbackUrl: "/admin/login" });
   };
 
+  const getFullYear = () => {
+    return new Date().getFullYear();
+  };
+
   return (
     <>
       <Head>
@@ -66,8 +70,8 @@ export default function Layout({ title, children }) {
               </a>
             </Link>
 
-            <ul  className={`nav-menu ${showHamburgerMenu}`}>
-              <li  className="nav-item">
+            <ul className={`nav-menu ${showHamburgerMenu}`}>
+              <li className="nav-item">
                 <Link href="/menu">
                   <a onClick={() => setIsActive(false)}>Menu</a>
                 </Link>
@@ -113,10 +117,12 @@ export default function Layout({ title, children }) {
           )}
         </header>
 
-        <main className={showHamburgerMenu} onClick={() => setIsActive(false)}>{children}</main>
+        <main className={showHamburgerMenu} onClick={() => setIsActive(false)}>
+          {children}
+        </main>
 
         <footer>
-          <p>Copyright © 2022 Borderline Pizza</p>
+          Copyright © {getFullYear()} Borderline Pizza
         </footer>
       </div>
     </>
